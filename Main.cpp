@@ -8,11 +8,14 @@ private:
 	string name;
 	string author;
 	int id;
-	list<string> books;
+	list<Book> books;
 public:
 	Book(string n, string a, int i) : name(n), author(a), id(i) {} // Constructor
 	~Book() {} // Destructor
-	void addbooks() {}
+	void addbooks(string name,string a,int i)
+	{
+		books.insert(books.end(), Book(name, a, i));
+	}
 	void deletebooks() {}
 	void updatebooks() {}
 	void searchbooks() {}
