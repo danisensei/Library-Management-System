@@ -1,7 +1,31 @@
 #include<iostream>
 using namespace std;
 
-int main()
+class Book
 {
-	cout<<"hello world"<<endl;
-}
+	addbooks();
+	deletebooks();
+	updatebooks();
+	searchbooks();
+};
+class User
+{
+	adduser();
+	deleteuser();
+	updateuser();
+};
+class BorrowandReturn
+{
+	borrowbook();
+	returnbook();
+	overdue();
+};
+class Transcationhistory
+{
+	recenttransactions();
+};
+class Reports
+{
+	booklist();
+	userlist();
+};
