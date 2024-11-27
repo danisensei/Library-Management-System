@@ -3,29 +3,32 @@
 using namespace std;
 
 class Book
-{ public:
+{
+private:
 	string name;
 	string author;
 	int id;
 	list<string> books;
-	void addbooks()
-	{
-
-	}
-	void deletebooks();
-	void updatebooks();
-	void searchbooks();
+public:
+	Book(string n, string a, int i) : name(n), author(a), id(i) {} // Constructor
+	~Book() {} // Destructor
+	void addbooks() {}
+	void deletebooks() {}
+	void updatebooks() {}
+	void searchbooks() {}
 };
+
 class User
 {
-public:
+private:
 	string name;
 	int id;
-
-
-	void adduser();
-	void deleteuser();
-	void updateuser();
+public:
+	User(string n, int i) : name(n), id(i) {}// Constructor
+	~User() {}// Destructor
+	void adduser() {}
+	void deleteuser() {}
+	void updateuser() {}
 };
 class BorrowandReturn
 {
