@@ -1,31 +1,44 @@
 #include<iostream>
+#include<list>
 using namespace std;
 
 class Book
-{
-	addbooks();
-	deletebooks();
-	updatebooks();
-	searchbooks();
+{ public:
+	string name;
+	string author;
+	int id;
+	list<string> books;
+	void addbooks()
+	{
+
+	}
+	void deletebooks();
+	void updatebooks();
+	void searchbooks();
 };
 class User
 {
-	adduser();
-	deleteuser();
-	updateuser();
+public:
+	string name;
+	int id;
+
+
+	void adduser();
+	void deleteuser();
+	void updateuser();
 };
 class BorrowandReturn
 {
-	borrowbook();
-	returnbook();
-	overdue();
+	void borrowbook();
+	void  returnbook();
+	void overdue();
 };
 class Transcationhistory
 {
-	recenttransactions();
+	void recenttransactions();
 };
 class Reports
 {
-	booklist();
-	userlist();
+	void booklist();
+	void userlist();
 };
