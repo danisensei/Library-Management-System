@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/hp/CLionProjects/Library-Management-System/cmake-build-debug",
-		"source" : "C:/Users/hp/CLionProjects/Library-Management-System"
+		"build" : "C:/Users/hp/Documents/GitHub/Library-Management-System/cmake-build-debug",
+		"source" : "C:/Users/hp/Documents/GitHub/Library-Management-System"
 	},
 	"version" : 
 	{
