@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SAMAMA\\Desktop\\Assigns\\DSA Lab proj\\LibraryManagementSys\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3E42F6D-B6AB-4D7D-8610-1AEEF798476B}|LibraryManagementSys.vcxproj|C:\\Users\\SAMAMA\\Desktop\\Assigns\\DSA Lab proj\\LibraryManagementSys\\Form1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{E3E42F6D-B6AB-4D7D-8610-1AEEF798476B}|LibraryManagementSys.vcxproj|solutionrelative:Form1.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.h [Design]",
+              "DocumentMoniker": "C:\\Users\\SAMAMA\\Desktop\\Assigns\\DSA Lab proj\\LibraryManagementSys\\Form1.h",
+              "RelativeDocumentMoniker": "Form1.h",
+              "ToolTip": "C:\\Users\\SAMAMA\\Desktop\\Assigns\\DSA Lab proj\\LibraryManagementSys\\Form1.h [Design]*",
+              "RelativeToolTip": "Form1.h [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-30T13:18:25.494Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
