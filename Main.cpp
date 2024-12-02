@@ -1,9 +1,11 @@
-#include<iostream>
-#include<list>
+#include <iostream>
+#include <list>
+#include <string>
+#include <unordered_map>
 using namespace std;
 class Book
 {
-private:
+public:
 	string name;
 	string author;
 	int id;
@@ -50,23 +52,75 @@ public:
 	}
 };
 
-class User
-{
-private:
+class User {
+public:
 	string name;
 	int id;
+	User* next;
+
 public:
-	User(string n, int i) : name(n), id(i) {}// Constructor
-	~User() {}// Destructor
-	void adduser() {}
-	void deleteuser() {}
-	void updateuser() {}
+	User(string n, int i) : name(n), id(i), next(nullptr) {} // Constructor
+	~User() {} // Destructor
+
+	void addUser(User*& head, string name, int id) {
+		User* newUser = new User(name, id);
+		newUser->next = head;
+		head = newUser;
+	}
+
+	void removeUser(User*& head, int id) {
+		User* temp = head;
+		User* prev = nullptr;
+
+		if (temp != nullptr && temp->id == id) {
+			head = temp->next;
+			delete temp;
+			return;
+		}
+
+		while (temp != nullptr && temp->id != id) {
+			prev = temp;
+			temp = temp->next;
+		}
+
+		if (temp == nullptr) return;
+
+		prev->next = temp->next;
+		delete temp;
+	}
+
+	void printUsers(User* head) {
+		User* temp = head;
+		while (temp != nullptr) {
+			cout << "User: " << temp->name << ", ID: " << temp->id << endl;
+			temp = temp->next;
+		}
+	}
 };
-class BorrowandReturn
-{
-	void borrowbook();
-	void  returnbook();
-	void overdue();
+
+class BorrowandReturn {
+private:
+	unordered_map<int, list<int>> userBorrowedBooks; // user id -> list of borrowed book ids
+
+public:
+	void borrowbook(User& user, Book& book) {
+		userBorrowedBooks[user.id].push_back(book.id);
+		cout << "User " << user.name << " borrowed book: " << book.name << endl;
+	}
+
+	void returnbook(User& user, Book& book) {
+		auto& borrowedBooks = userBorrowedBooks[user.id];
+		borrowedBooks.remove(book.id);
+		cout << "User " << user.name << " returned book: " << book.name << endl;
+	}
+
+	void overdue(User& user) {
+		cout << "User " << user.name << " has overdue books: ";
+		for (int bookId : userBorrowedBooks[user.id]) {
+			cout << bookId << " ";
+		}
+		cout << endl;
+	}
 };
 class Transcationhistory
 {
