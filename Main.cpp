@@ -57,6 +57,22 @@ public:
 	string name;
 	int id;
 	User* next;
+	string username;
+	string password;
+
+public:
+	User(string n, int i, string u, string p) : name(n), id(i), username(u), password(p), next(nullptr) {} // Constructor
+
+	bool signIn(string u, string p) {
+		return (username == u && password == p);
+	}
+
+	static User* signUp(User*& head, string name, int id, string username, string password) {
+		User* newUser = new User(name, id, username, password);
+		newUser->next = head;
+		head = newUser;
+		return newUser;
+	}
 
 public:
 	User(string n, int i) : name(n), id(i), next(nullptr) {} // Constructor
