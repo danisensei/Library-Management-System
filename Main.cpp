@@ -1,7 +1,6 @@
 #include<iostream>
 #include<list>
 using namespace std;
-
 class Book
 {
 private:
@@ -9,16 +8,46 @@ private:
 	string author;
 	int id;
 	list<Book> books;
+
 public:
 	Book(string n, string a, int i) : name(n), author(a), id(i) {} // Constructor
 	~Book() {} // Destructor
-	void addbooks(string name,string a,int i)
+
+	void addbooks(string name, string a, int i)
 	{
 		books.insert(books.end(), Book(name, a, i));
 	}
-	void deletebooks() {}
-	void updatebooks() {}
-	void searchbooks() {}
+
+	void deletebooks(int bookId)
+	{
+		books.remove_if([bookId](const Book &b) { return b.id == bookId; });
+	}
+
+	void updatebooks(int bookId, string newName, string newAuthor)
+	{
+		for (auto &book : books)
+		{
+			if (book.id == bookId)
+			{
+				book.name = newName;
+				book.author = newAuthor;
+				break;
+			}
+		}
+	}
+
+	void searchbooks(int bookId)
+	{
+		for (const auto &book : books)
+		{
+			if (book.id == bookId)
+			{
+				cout << "Book found: " << book.name << " by " << book.author << endl;
+				return;
+			}
+		}
+		cout << "Book not found" << endl;
+	}
 };
 
 class User
