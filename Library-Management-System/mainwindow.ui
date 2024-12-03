@@ -23,7 +23,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>60</x>
       <y>0</y>
       <width>681</width>
       <height>51</height>
@@ -31,13 +31,16 @@
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI Black</family>
+      <family>Segoe UI</family>
       <pointsize>28</pointsize>
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
-     <string>HMH's Library Management System</string>
+     <string>HDM's Library Management System</string>
     </property>
    </widget>
    <widget class="QLabel" name="image">
@@ -59,7 +62,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QGroupBox" name="Login">
+   <widget class="QGroupBox" name="RegLoginGroup">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -136,16 +139,21 @@
       <rect>
        <x>50</x>
        <y>20</y>
-       <width>121</width>
+       <width>111</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI Black</family>
-       <pointsize>16</pointsize>
+       <family>VT323</family>
+       <pointsize>24</pointsize>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+font-family:VT323
+}</string>
      </property>
      <property name="text">
       <string>Username</string>
@@ -162,13 +170,94 @@
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI Black</family>
-       <pointsize>16</pointsize>
+       <family>VT323</family>
+       <pointsize>24</pointsize>
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+font-family:VT323
+}</string>
+     </property>
      <property name="text">
       <string>Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="LoginButton">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>140</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #3e8e41;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="RegisterButton">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>140</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #3e8e41;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Register</string>
      </property>
     </widget>
    </widget>
