@@ -96,7 +96,7 @@
        <height>31</height>
       </rect>
      </property>
-     <layout class="QGridLayout" name="USernameGrid">
+     <layout class="QGridLayout" name="UsernameGrid">
       <item row="0" column="0">
        <widget class="QLineEdit" name="Username">
         <property name="text">
