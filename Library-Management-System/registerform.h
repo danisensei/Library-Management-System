@@ -18,6 +18,7 @@ public:
 private slots:
     void on_RegisterButton_clicked();
     void on_CancelButton_clicked();
+    void on_Registration_complete();
 
 
 private:

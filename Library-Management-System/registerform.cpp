@@ -1,5 +1,6 @@
 #include "registerform.h"
 #include "ui_registerform.h"
+#include "mainwindow.h"
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
@@ -54,9 +55,21 @@ void RegisterForm::on_RegisterButton_clicked()
     ui->UsernameField->clear();
     ui->EmailTextField->clear();
     ui->PasswordField->clear();
+
+    on_Registration_complete();
+}
+
+void RegisterForm::on_Registration_complete()
+{
+    MainWindow *mainWindow = new MainWindow();
+    this->hide();
+    this->deleteLater();
+    mainWindow->show();
 }
 
 void RegisterForm::on_CancelButton_clicked()
 {
-    qDebug() << "Cancel!";
+    MainWindow *mainWindow = new MainWindow();
+    mainWindow->show();
+    this->close();
 }

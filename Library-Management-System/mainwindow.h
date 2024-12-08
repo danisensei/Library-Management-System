@@ -20,6 +20,7 @@ public:
 private slots:
     void on_RegisterButton_clicked();
     void on_LoginButton_clicked();
+    void on_Login_Success();
     void loadCustomFont();
 
 private:
