@@ -16,8 +16,16 @@ public:
     ~mainmenu();
 
 private slots:
-    void on_hello_clicked();
-
+    void on_adduserbutton_clicked();
+    void on_deleteuserbutton_clicked();
+    void on_edituserbutton_clicked();
+    void on_viewusersbutton_clicked();
+    void on_addbookbutton_clicked();
+    void on_deletebookbutton_clicked();
+    void on_editbookbutton_clicked();
+    void on_viewbooksbutton_clicked();
+    void on_issuebookbutton_clicked();
+    void on_returnbookbutton_clicked();
 
 private:
     Ui::mainmenu *ui;
