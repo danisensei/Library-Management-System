@@ -52,7 +52,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>630</x>
      <y>100</y>
      <width>71</width>
      <height>16</height>
@@ -65,8 +65,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>100</y>
+     <x>370</x>
+     <y>330</y>
      <width>51</width>
      <height>16</height>
     </rect>
@@ -78,9 +78,9 @@
   <widget class="QPushButton" name="adduserbutton">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>99</x>
      <y>160</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -91,9 +91,9 @@
   <widget class="QPushButton" name="deleteuserbutton">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>99</x>
      <y>190</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -104,9 +104,9 @@
   <widget class="QPushButton" name="edituserbutton">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>99</x>
      <y>220</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -117,9 +117,9 @@
   <widget class="QPushButton" name="viewusersbutton">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>99</x>
      <y>250</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -130,9 +130,9 @@
   <widget class="QPushButton" name="issuebookbutton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>160</y>
-     <width>80</width>
+     <x>340</x>
+     <y>390</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
@@ -143,9 +143,9 @@
   <widget class="QPushButton" name="returnbookbutton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>190</y>
-     <width>80</width>
+     <x>340</x>
+     <y>420</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
@@ -156,9 +156,9 @@
   <widget class="QPushButton" name="editbookbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>610</x>
      <y>220</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -169,9 +169,9 @@
   <widget class="QPushButton" name="viewbooksbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>610</x>
      <y>250</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -182,9 +182,9 @@
   <widget class="QPushButton" name="deletebookbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>610</x>
      <y>190</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -195,9 +195,9 @@
   <widget class="QPushButton" name="addbookbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>610</x>
      <y>160</y>
-     <width>80</width>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
