@@ -26,7 +26,7 @@ private slots:
     void on_viewbooksbutton_clicked();
     void on_issuebookbutton_clicked();
     void on_returnbookbutton_clicked();
-
+    void on_logoutbutton_clicked();
 private:
     Ui::mainmenu *ui;
 };

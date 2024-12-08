@@ -1,5 +1,8 @@
 #include "mainmenu.h"
 #include "ui_mainmenu.h"
+#include "mainwindow.h"
+#include "adduser.h"
+#include "ui_registerform.h"
 
 mainmenu::mainmenu(QWidget *parent)
     : QWidget(parent)
@@ -13,52 +16,64 @@ mainmenu::~mainmenu()
     delete ui;
 }
 
-void mainmenu :: on_adduserbutton_clicked()
+void mainmenu::on_adduserbutton_clicked()
 {
-qDebug() << "add user clicked";
+    qDebug() << "Add User button clicked!";
+
+    adduser *addUserWidget = new adduser();
+    addUserWidget->setAttribute(Qt::WA_DeleteOnClose);
+    addUserWidget->show();
+    this->hide();
+
 }
 
 void mainmenu :: on_deleteuserbutton_clicked()
 {
-qDebug() << "delete user";
+    qDebug() << "delete user";
 }
 
 void mainmenu :: on_edituserbutton_clicked()
 {
-qDebug() << "edit user";
+    qDebug() << "edit user";
 }
 
 void mainmenu :: on_viewusersbutton_clicked()
 {
-qDebug() << "viewusers!";
+    qDebug() << "viewusers!";
 }
 
 void mainmenu :: on_addbookbutton_clicked()
 {
-qDebug() << "addbooks!";
+    qDebug() << "addbooks!";
 }
 
 void mainmenu :: on_deletebookbutton_clicked()
 {
-qDebug() << "deletebook!";
+    qDebug() << "deletebook!";
 }
 
 void mainmenu :: on_editbookbutton_clicked()
 {
-qDebug() << "editbook!";
+    qDebug() << "editbook!";
 }
 
 void mainmenu :: on_viewbooksbutton_clicked()
 {
-qDebug() << "Invalid credentials!";
+    qDebug() << "viewbooks";
 }
 
 void mainmenu :: on_issuebookbutton_clicked()
 {
-qDebug() << "issuebook!";
+    qDebug() << "issuebook!";
 }
 
 void mainmenu :: on_returnbookbutton_clicked()
 {
-qDebug() << "returnbook!";
+    qDebug() << "returnbook!";
+}
+void mainmenu :: on_logoutbutton_clicked()
+{
+    MainWindow *mainWindow = new MainWindow();
+    mainWindow->show();
+    this->close();
 }
