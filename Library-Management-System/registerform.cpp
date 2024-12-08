@@ -12,3 +12,13 @@ RegisterForm::~RegisterForm()
 {
     delete ui;
 }
+
+void RegisterForm::on_RegisterButton_clicked()
+{
+    qDebug() << "Registered!";
+}
+
+void RegisterForm::on_CancelButton_clicked()
+{
+    qDebug() << "Cancel!";
+}

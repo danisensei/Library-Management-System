@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "registerform.h"
 #include <QFontDatabase>
 #include <QDebug>
 
@@ -35,6 +36,9 @@ void MainWindow::loadCustomFont()
 void MainWindow::on_RegisterButton_clicked()
 {
     qDebug() << "RegisterButton clicked!";
+    RegisterForm *registerForm = new RegisterForm();
+    registerForm->setAttribute(Qt::WA_DeleteOnClose);
+    registerForm->show();
 }
 
 void MainWindow::on_LoginButton_clicked()
