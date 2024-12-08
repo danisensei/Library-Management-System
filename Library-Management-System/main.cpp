@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
     MainWindow mainWindow;
     mainWindow.show();
 
-    RegisterForm RegisterForm;
-    RegisterForm.show();
+    //RegisterForm RegisterForm;
+    //RegisterForm.show();
 
     return app.exec();
 }

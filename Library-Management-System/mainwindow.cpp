@@ -34,12 +34,15 @@ void MainWindow::loadCustomFont()
 }
 
 void MainWindow::on_RegisterButton_clicked()
+
 {
-    qDebug() << "RegisterButton clicked!";
-    RegisterForm *registerForm = new RegisterForm();
-    registerForm->setAttribute(Qt::WA_DeleteOnClose);
-    registerForm->show();
+        qDebug() << "RegisterButton clicked!";
+        RegisterForm *registerForm = new RegisterForm();
+        registerForm->setAttribute(Qt::WA_DeleteOnClose);
+        registerForm->show();
+        this->hide();
 }
+
 
 void MainWindow::on_LoginButton_clicked()
 {
