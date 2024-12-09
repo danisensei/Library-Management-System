@@ -43,7 +43,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="idlabel">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -97,7 +97,7 @@
     <string>Enter Mail :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="namelabel_2">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>340</x>

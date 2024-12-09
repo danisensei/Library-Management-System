@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     adduser.cpp \
+    linkedlist.cpp \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
 
 HEADERS += \
     adduser.h \
+    linkedlist.h \
     mainmenu.h \
     mainwindow.h \
     registerform.h
