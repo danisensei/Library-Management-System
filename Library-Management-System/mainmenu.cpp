@@ -2,6 +2,8 @@
 #include "ui_mainmenu.h"
 #include "mainwindow.h"
 #include "adduser.h"
+#include "deleteuser.h"
+#include "ui_deleteuser.h"
 #include "ui_registerform.h"
 
 mainmenu::mainmenu(QWidget *parent)
@@ -29,7 +31,12 @@ void mainmenu::on_adduserbutton_clicked()
 
 void mainmenu :: on_deleteuserbutton_clicked()
 {
-    qDebug() << "delete user";
+    qDebug() << "Delete User button clicked!";
+
+    deleteuser *deleteUserWidget = new deleteuser();
+    deleteUserWidget->setAttribute(Qt::WA_DeleteOnClose);
+    deleteUserWidget->show();
+    this->hide();
 }
 
 void mainmenu :: on_edituserbutton_clicked()

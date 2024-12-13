@@ -5,6 +5,10 @@
 
 LinkedList::LinkedList() : head(nullptr) {}
 
+User* LinkedList::getHead() const {
+    return head;
+}
+
 LinkedList::~LinkedList() {
     clearList();
 }
@@ -16,28 +20,26 @@ void LinkedList::addUser(const QString& name, const QString& email, const QStrin
     qDebug() << "User added:" << name << email << id;
 }
 
-// bool LinkedList::removeUser(const QString& id) {
-//     User* current = head;
-//     User* previous = nullptr;
+bool LinkedList::removeUser(const QString& id) {
+    User* current = head;
+    User* previous = nullptr;
 
-//     while (current) {
-//         if (current->id == id) {
-//             if (previous) {
-//                 previous->next = current->next;
-//             } else {
-//                 head = current->next;
-//             }
-//             delete current;
-//             qDebug() << "User with ID" << id << "removed.";
-//             return true;
-//         }
-//         previous = current;
-//         current = current->next;
-//     }
+    while (current) {
+        if (current->id == id) {
+            if (previous) {
+                previous->next = current->next;
+            } else {
+                head = current->next;
+            }
+            delete current;
+            return true;
+        }
+        previous = current;
+        current = current->next;
+    }
+    return false;
+}
 
-//     qDebug() << "User with ID" << id << "not found.";
-//     return false;
-// }
 
 void LinkedList::saveToFile(const QString& filename) const {
     QFile file(filename);
