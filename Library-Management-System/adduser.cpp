@@ -1,6 +1,8 @@
 #include "adduser.h"
 #include "ui_adduser.h"
 #include "LinkedList.h"
+#include "mainmenu.h"
+#include "ui_mainmenu.h"
 
 static LinkedList userList;
 
@@ -14,6 +16,15 @@ adduser::adduser(QWidget* parent)
 adduser::~adduser() {
     delete ui;
     userList.saveToFile("addedusers.txt");
+}
+
+void adduser::on_backbutton_clicked()
+{
+    qDebug() <<"back button clicked";
+    mainmenu *backwidget= new mainmenu();
+    backwidget->setAttribute(Qt::WA_DeleteOnClose);
+    backwidget->show();
+    this->hide();
 }
 
 void adduser::on_addubutton_clicked() {

@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_addubutton_clicked();
+    void on_backbutton_clicked();
 
 
 private:

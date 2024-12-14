@@ -18,6 +18,7 @@ public:
 
 private slots:
     void onDeleteButtonClicked();
+    void on_backbutton_clicked();
 
 private:
     Ui::deleteuser *ui;
