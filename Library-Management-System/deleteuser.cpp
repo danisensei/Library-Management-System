@@ -72,6 +72,7 @@ void deleteuser::on_backbutton_clicked()
     this->hide();
 }
 
-void deleteuser::saveUserData() {
+void deleteuser::saveUserData()
+{
     userList.saveToFile("addedusers.txt");
 }

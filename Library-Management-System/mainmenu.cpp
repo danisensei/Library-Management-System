@@ -5,6 +5,8 @@
 #include "deleteuser.h"
 #include "ui_deleteuser.h"
 #include "ui_registerform.h"
+#include "viewusers.h"
+#include "ui_viewusers.h"
 
 mainmenu::mainmenu(QWidget *parent)
     : QWidget(parent)
@@ -44,10 +46,17 @@ void mainmenu :: on_edituserbutton_clicked()
     qDebug() << "edit user";
 }
 
-void mainmenu :: on_viewusersbutton_clicked()
+void mainmenu::on_viewusersbutton_clicked()
 {
-    qDebug() << "viewusers!";
+    qDebug() << "View Users button clicked!";
+
+    viewusers *viewUsersWidget = new viewusers();
+    viewUsersWidget->setAttribute(Qt::WA_DeleteOnClose);
+    viewUsersWidget->show();
+    this->hide();
+
 }
+
 
 void mainmenu :: on_addbookbutton_clicked()
 {

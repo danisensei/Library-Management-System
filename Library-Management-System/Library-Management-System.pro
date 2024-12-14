@@ -15,7 +15,8 @@ SOURCES += \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
-    registerform.cpp
+    registerform.cpp \
+    viewusers.cpp
 
 HEADERS += \
     adduser.h \
@@ -23,14 +24,16 @@ HEADERS += \
     linkedlist.h \
     mainmenu.h \
     mainwindow.h \
-    registerform.h
+    registerform.h \
+    viewusers.h
 
 FORMS += \
     adduser.ui \
     deleteuser.ui \
     mainmenu.ui \
     mainwindow.ui \
-    registerform.ui
+    registerform.ui \
+    viewusers.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
