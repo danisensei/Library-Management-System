@@ -7,6 +7,9 @@
 #include "ui_registerform.h"
 #include "viewusers.h"
 #include "ui_viewusers.h"
+#include "editusers.h"
+#include "ui_editusers.h"
+
 
 mainmenu::mainmenu(QWidget *parent)
     : QWidget(parent)
@@ -44,6 +47,10 @@ void mainmenu :: on_deleteuserbutton_clicked()
 void mainmenu :: on_edituserbutton_clicked()
 {
     qDebug() << "edit user";
+    editusers *editUsersWidget = new editusers();
+    editUsersWidget->setAttribute(Qt::WA_DeleteOnClose);
+    editUsersWidget->show();
+    this->hide();
 }
 
 void mainmenu::on_viewusersbutton_clicked()
