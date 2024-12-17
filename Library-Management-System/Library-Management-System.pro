@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addbook.cpp \
     adduser.cpp \
     deleteuser.cpp \
     editusers.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
     viewusers.cpp
 
 HEADERS += \
+    addbook.h \
     adduser.h \
     deleteuser.h \
     editusers.h \
@@ -30,6 +32,7 @@ HEADERS += \
     viewusers.h
 
 FORMS += \
+    addbook.ui \
     adduser.ui \
     deleteuser.ui \
     editusers.ui \
