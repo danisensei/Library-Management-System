@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>deletebook</class>
- <widget class="QWidget" name="deletebook">
+ <class>searchbooks</class>
+ <widget class="QWidget" name="searchbooks">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>803</width>
-    <height>589</height>
+    <width>791</width>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>30</x>
      <y>530</y>
      <width>80</width>
      <height>24</height>

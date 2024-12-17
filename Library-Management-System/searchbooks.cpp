@@ -1,23 +1,22 @@
-#include "deletebook.h"
-#include "ui_deletebook.h"
+#include "searchbooks.h"
+#include "ui_searchbooks.h"
 #include "mainmenu.h"
 #include "ui_mainmenu.h"
 
-deletebook::deletebook(QWidget *parent)
+searchbooks::searchbooks(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::deletebook)
+    , ui(new Ui::searchbooks)
 {
     ui->setupUi(this);
 }
 
-deletebook::~deletebook()
+searchbooks::~searchbooks()
 {
     delete ui;
 }
 
-void deletebook::on_backbutton_clicked()
+void searchbooks:: on_backbutton_clicked()
 {
-    qDebug() <<"back button clicked";
     mainmenu *backwidget= new mainmenu();
     backwidget->setAttribute(Qt::WA_DeleteOnClose);
     backwidget->show();

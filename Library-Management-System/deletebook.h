@@ -15,6 +15,9 @@ public:
     explicit deletebook(QWidget *parent = nullptr);
     ~deletebook();
 
+private slots:
+    void on_backbutton_clicked();
+
 private:
     Ui::deletebook *ui;
 };

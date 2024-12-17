@@ -26,7 +26,7 @@ private slots:
     void on_addbookbutton_clicked();
     void on_deletebookbutton_clicked();
     void on_editbookbutton_clicked();
-    void on_viewbooksbutton_clicked();
+    void on_searchbooksbutton_clicked();
     void on_issuebookbutton_clicked();
     void on_returnbookbutton_clicked();
     void on_logoutbutton_clicked();

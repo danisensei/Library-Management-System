@@ -13,7 +13,10 @@
 #include "ui_addbook.h"
 #include "deletebook.h"
 #include "ui_deletebook.h"
-
+#include "editbook.h"
+#include "ui_editbook.h"
+#include "searchbooks.h"
+#include "ui_searchbooks.h"
 
 mainmenu::mainmenu(QWidget *parent)
     : QWidget(parent)
@@ -84,16 +87,29 @@ void mainmenu::on_addbookbutton_clicked()
 void mainmenu :: on_deletebookbutton_clicked()
 {
     qDebug() << "deletebook!";
+
+    deletebook *deletebookWidget = new deletebook();
+    deletebookWidget->setAttribute(Qt::WA_DeleteOnClose);
+    deletebookWidget->show();
+    this->hide();
 }
 
 void mainmenu :: on_editbookbutton_clicked()
 {
     qDebug() << "editbook!";
+    editbook *editbookwidget = new editbook();
+    editbookwidget->setAttribute(Qt::WA_DeleteOnClose);
+    editbookwidget->show();
+    this->hide();
 }
-
-void mainmenu :: on_viewbooksbutton_clicked()
+void mainmenu :: on_searchbooksbutton_clicked()
 {
     qDebug() << "viewbooks";
+    searchbooks *searchwidget = new searchbooks();
+    searchwidget->setAttribute(Qt::WA_DeleteOnClose);
+    searchwidget->show();
+    this->hide();
+
 }
 
 void mainmenu :: on_issuebookbutton_clicked()

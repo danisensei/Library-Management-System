@@ -166,7 +166,7 @@
     <string>Edit Book</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="viewbooksbutton">
+  <widget class="QPushButton" name="searchbooksbutton">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -176,7 +176,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>View Books</string>
+    <string>Search Books</string>
    </property>
   </widget>
   <widget class="QPushButton" name="deletebookbutton">

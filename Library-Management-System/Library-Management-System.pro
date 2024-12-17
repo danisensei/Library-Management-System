@@ -13,12 +13,14 @@ SOURCES += \
     adduser.cpp \
     deletebook.cpp \
     deleteuser.cpp \
+    editbook.cpp \
     editusers.cpp \
     linkedlist.cpp \
     main.cpp \
     mainmenu.cpp \
     mainwindow.cpp \
     registerform.cpp \
+    searchbooks.cpp \
     viewusers.cpp
 
 HEADERS += \
@@ -26,11 +28,13 @@ HEADERS += \
     adduser.h \
     deletebook.h \
     deleteuser.h \
+    editbook.h \
     editusers.h \
     linkedlist.h \
     mainmenu.h \
     mainwindow.h \
     registerform.h \
+    searchbooks.h \
     viewusers.h
 
 FORMS += \
@@ -38,10 +42,12 @@ FORMS += \
     adduser.ui \
     deletebook.ui \
     deleteuser.ui \
+    editbook.ui \
     editusers.ui \
     mainmenu.ui \
     mainwindow.ui \
     registerform.ui \
+    searchbooks.ui \
     viewusers.ui
 
 # Default rules for deployment.
