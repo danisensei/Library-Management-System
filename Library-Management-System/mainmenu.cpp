@@ -69,15 +69,16 @@ void mainmenu::on_viewusersbutton_clicked()
 }
 
 
-void mainmenu :: on_addbookbutton_clicked()
+void mainmenu::on_addbookbutton_clicked()
 {
     qDebug() << "Add Book button clicked!";
 
-    addbook *addbookwidget = new addbook();
+    addbook *addbookwidget = new addbook(&books);
     addbookwidget->setAttribute(Qt::WA_DeleteOnClose);
     addbookwidget->show();
     this->hide();
 }
+
 
 
 void mainmenu :: on_deletebookbutton_clicked()

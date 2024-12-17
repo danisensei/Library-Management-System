@@ -80,7 +80,7 @@
     <string>Add</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="nameline">
+  <widget class="QLineEdit" name="booknamefield">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -90,7 +90,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="idline">
+  <widget class="QLineEdit" name="ISBNfield">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -100,7 +100,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="authorline">
+  <widget class="QLineEdit" name="authorfield">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -141,7 +141,7 @@
     <string>Genre</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="genrecombobox">
    <property name="geometry">
     <rect>
      <x>100</x>
