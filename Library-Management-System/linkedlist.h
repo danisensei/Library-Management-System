@@ -12,6 +12,7 @@ struct User {
         : name(name), email(email), id(id), next(nullptr) {}
 };
 
+
 class LinkedList {
 private:
     User* head;

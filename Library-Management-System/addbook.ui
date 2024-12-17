@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>795</width>
-    <height>598</height>
+    <width>603</width>
+    <height>444</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>140</y>
+     <x>160</x>
+     <y>70</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -28,15 +28,15 @@
     </font>
    </property>
    <property name="text">
-    <string>Book Name:</string>
+    <string>Book Name</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>200</y>
-     <width>71</width>
+     <x>170</x>
+     <y>130</y>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
@@ -46,14 +46,88 @@
     </font>
    </property>
    <property name="text">
-    <string>Author:</string>
+    <string>Author</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>260</y>
+     <x>170</x>
+     <y>200</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>ISBN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addbutton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>160</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="nameline">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>100</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="idline">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>220</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="authorline">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>160</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backbutton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>220</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>250</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -64,64 +138,43 @@
     </font>
    </property>
    <property name="text">
-    <string>Book ID:</string>
+    <string>Genre</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="addbutton">
+  <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>330</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="nameline">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>140</y>
+     <x>100</x>
+     <y>270</y>
      <width>221</width>
      <height>24</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="idline">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>260</y>
-     <width>221</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="authorline">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>200</y>
-     <width>221</width>
-     <height>24</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="backbutton">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>540</y>
-     <width>80</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Back</string>
-   </property>
+   <item>
+    <property name="text">
+     <string>Fiction</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Fantasy</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>History</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Literature</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Poetry</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>

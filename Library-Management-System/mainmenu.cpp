@@ -9,6 +9,8 @@
 #include "ui_viewusers.h"
 #include "editusers.h"
 #include "ui_editusers.h"
+#include "addbook.h"
+#include "ui_addbook.h"
 
 
 mainmenu::mainmenu(QWidget *parent)
@@ -67,8 +69,14 @@ void mainmenu::on_viewusersbutton_clicked()
 
 void mainmenu :: on_addbookbutton_clicked()
 {
-    qDebug() << "addbooks!";
+    qDebug() << "Add Book button clicked!";
+
+    addbook *addbookwidget = new addbook();
+    addbookwidget->setAttribute(Qt::WA_DeleteOnClose);
+    addbookwidget->show();
+    this->hide();
 }
+
 
 void mainmenu :: on_deletebookbutton_clicked()
 {
