@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     addbook.cpp \
     adduser.cpp \
+    deletebook.cpp \
     deleteuser.cpp \
     editusers.cpp \
     linkedlist.cpp \
@@ -23,6 +24,7 @@ SOURCES += \
 HEADERS += \
     addbook.h \
     adduser.h \
+    deletebook.h \
     deleteuser.h \
     editusers.h \
     linkedlist.h \
@@ -34,6 +36,7 @@ HEADERS += \
 FORMS += \
     addbook.ui \
     adduser.ui \
+    deletebook.ui \
     deleteuser.ui \
     editusers.ui \
     mainmenu.ui \
