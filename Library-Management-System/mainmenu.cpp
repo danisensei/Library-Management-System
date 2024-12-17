@@ -11,6 +11,8 @@
 #include "ui_editusers.h"
 #include "addbook.h"
 #include "ui_addbook.h"
+#include "deletebook.h"
+#include "ui_deletebook.h"
 
 
 mainmenu::mainmenu(QWidget *parent)
