@@ -3,6 +3,8 @@
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
+#include <mainmenu.h>
+#include <ui_mainmenu.h>
 
 addbook::addbook(QMap<QString, QVariantMap>* books, QWidget *parent)
     : QWidget(parent)
@@ -92,5 +94,9 @@ void addbook::onAddBook()
 
 void addbook::onBack()
 {
-    this->close();
+    qDebug() <<"back button clicked";
+    mainmenu *backwidget= new mainmenu();
+    backwidget->setAttribute(Qt::WA_DeleteOnClose);
+    backwidget->show();
+    this->hide();
 }
