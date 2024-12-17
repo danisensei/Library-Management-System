@@ -2,6 +2,9 @@
 #define MAINMENU_H
 
 #include <QWidget>
+#include <QMap>
+#include <QString>
+#include <QVariantMap>
 
 namespace Ui {
 class mainmenu;
@@ -27,8 +30,10 @@ private slots:
     void on_issuebookbutton_clicked();
     void on_returnbookbutton_clicked();
     void on_logoutbutton_clicked();
+
 private:
     Ui::mainmenu *ui;
+    QMap<QString, QVariantMap> books;
 };
 
 #endif // MAINMENU_H

@@ -24,7 +24,10 @@ private slots:
 
 private:
     Ui::addbook *ui;
-    QMap<QString, QVariantMap>* books; // Pointer to shared book collection
+    QMap<QString, QVariantMap>* books;
+
+    void loadBooksFromFile();
+    void saveBookToFile(const QString& isbn, const QVariantMap& bookDetails);
 };
 
 #endif // ADDBOOK_H
