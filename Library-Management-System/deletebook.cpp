@@ -5,10 +5,9 @@
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
-#include <QStandardItemModel>
 
 
-QStandardItemModel *model;
+
 
 deletebook::deletebook(QWidget *parent)
     : QWidget(parent)

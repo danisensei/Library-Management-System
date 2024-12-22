@@ -2,6 +2,7 @@
 #define EDITBOOK_H
 
 #include <QWidget>
+#include <QStandardItemModel>
 
 namespace Ui {
 class editbook;
@@ -17,8 +18,10 @@ public:
 
 private slots:
     void on_backbutton_clicked();
+    void loadBooksFromFile();
 private:
     Ui::editbook *ui;
+    QStandardItemModel *model;
 };
 
 #endif // EDITBOOK_H
