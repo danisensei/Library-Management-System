@@ -29,10 +29,10 @@
   <widget class="QTableView" name="booktable">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>150</y>
-     <width>311</width>
-     <height>211</height>
+    <x>40</x>
+    <y>90</y>
+    <width>721</width>
+    <height>311</height>
     </rect>
    </property>
   </widget>

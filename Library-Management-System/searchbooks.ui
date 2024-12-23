@@ -26,6 +26,16 @@
     <string>Back</string>
    </property>
   </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+    <x>40</x>
+    <y>90</y>
+    <width>721</width>
+    <height>311</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

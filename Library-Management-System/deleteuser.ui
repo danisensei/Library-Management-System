@@ -16,8 +16,8 @@
   <widget class="QLineEdit" name="deleteidtextbox">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>340</y>
+     <x>280</x>
+     <y>390</y>
      <width>259</width>
      <height>31</height>
     </rect>
@@ -26,8 +26,8 @@
   <widget class="QLabel" name="idlabel">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>340</y>
+     <x>200</x>
+     <y>380</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -45,7 +45,7 @@
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>40</y>
+     <y>-10</y>
      <width>201</width>
      <height>72</height>
     </rect>
@@ -62,8 +62,8 @@
   <widget class="QPushButton" name="deletebutton">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>390</y>
+     <x>310</x>
+     <y>440</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -75,10 +75,10 @@
   <widget class="QTableView" name="usertable">
    <property name="geometry">
     <rect>
-     <x>215</x>
-     <y>130</y>
-     <width>421</width>
-     <height>192</height>
+     <x>150</x>
+     <y>60</y>
+     <width>511</width>
+     <height>311</height>
     </rect>
    </property>
   </widget>
