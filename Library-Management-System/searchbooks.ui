@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Search Books</string>
   </property>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>530</y>
+     <y>540</y>
      <width>80</width>
      <height>24</height>
     </rect>
@@ -26,13 +26,39 @@
     <string>Back</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="searchButton">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>50</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="searchLineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>600</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Enter ISBN or Title to search...</string>
+   </property>
+  </widget>
   <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-    <x>40</x>
-    <y>90</y>
-    <width>721</width>
-    <height>311</height>
+     <x>30</x>
+     <y>90</y>
+     <width>721</width>
+     <height>311</height>
     </rect>
    </property>
   </widget>
