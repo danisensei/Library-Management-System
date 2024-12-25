@@ -19,6 +19,9 @@ public:
 private slots:
     void on_backbutton_clicked();
     void loadBooksFromFile();
+    void savetofile();
+    void on_savebutton_clicked();
+
 private:
     Ui::editbook *ui;
     QStandardItemModel *model;

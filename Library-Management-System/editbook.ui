@@ -29,11 +29,24 @@
   <widget class="QTableView" name="booktable">
    <property name="geometry">
     <rect>
-    <x>40</x>
-    <y>90</y>
-    <width>721</width>
-    <height>311</height>
+     <x>40</x>
+     <y>90</y>
+     <width>721</width>
+     <height>311</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="savebutton">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>540</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save</string>
    </property>
   </widget>
  </widget>

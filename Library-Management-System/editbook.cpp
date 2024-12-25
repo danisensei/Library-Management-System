@@ -3,6 +3,7 @@
 #include "mainmenu.h"
 #include "ui_mainmenu.h"
 #include <QFile>
+#include <QMessageBox>
 
 
 
@@ -35,12 +36,10 @@ void editbook:: on_backbutton_clicked()
 
 void editbook::loadBooksFromFile()
 {
-
     if (model) {
         delete model;
         model = nullptr;
     }
-
 
     model = new QStandardItemModel(this);
     model->setHorizontalHeaderLabels({"ISBN", "Name", "Author", "Genre"});
@@ -62,7 +61,32 @@ void editbook::loadBooksFromFile()
         file.close();
     }
 
-
     ui->booktable->setModel(model);
     ui->booktable->resizeColumnsToContents();
+    ui->booktable->setEditTriggers(QAbstractItemView::DoubleClicked);
 }
+
+void editbook::savetofile()
+{
+    if (!model) return;
+
+    QFile file("addedbooks.txt");
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&file);
+        for (int row = 0; row < model->rowCount(); ++row) {
+            QStringList rowData;
+            for (int col = 0; col < model->columnCount(); ++col) {
+                rowData.append(model->item(row, col)->text());
+            }
+            out << rowData.join("|") << "\n";
+        }
+        file.close();
+    }
+    QMessageBox::information(this, "Success", "Book data saved successfully!");
+}
+
+void editbook::on_savebutton_clicked()
+{
+    savetofile();
+}
+
