@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "mainmenu.h"
 #include "ui_mainmenu.h"
+#include "QMessageBox"
 
 static LinkedList userList;
 
@@ -43,4 +44,6 @@ void adduser::on_addubutton_clicked() {
     ui->namefield->clear();
     ui->mailfield->clear();
     ui->idfield->clear();
+    QMessageBox::information(this, "Success", "User data saved successfully!");
+
 }
