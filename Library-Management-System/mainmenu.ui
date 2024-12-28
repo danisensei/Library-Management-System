@@ -14,11 +14,107 @@
    <string>HDM Library Management System</string>
   </property>
   <property name="styleSheet">
-   <string>
-    QWidget {
-        background-color: #f0f4f7;
-    }
-   </string>
+   <string notr="true">
+QWidget {
+    background-color: #f8f9fa; 
+    font-family: &quot;Segoe UI&quot;;
+    font-size: 12pt;
+    color: #212529; 
+}
+
+QLabel {
+    color: #343a40; 
+}
+
+QLabel#mainmenulabel {
+    color: #495057; 
+}
+
+QPushButton {
+    background-color: #007bff; 
+    color: white; 
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font: bold 12pt &quot;Segoe UI&quot;;
+}
+
+QPushButton:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+QPushButton:pressed {
+    background-color: #003f7f; 
+    border-color: #003f7f;
+}
+
+
+QPushButton#logoutbutton {
+    background-color: #FF5733; 
+    color: white; 
+    border: 2px solid #FF5733; 
+    border-radius: 10px; 
+    padding: 10px 20px;
+    font: bold 14px &quot;Segoe UI&quot;; 
+}
+
+QPushButton#logoutbutton:hover {
+    background-color: #E74C3C; 
+    border-color: #E74C3C; 
+}
+
+QPushButton#logoutbutton:pressed {
+    background-color: #C0392B; 
+    border-color: #C0392B; 
+    color: #FDEDEC;
+}
+
+
+QLabel#userimg, QLabel#bookimg, QLabel#issuereturnimg, QLabel#image_center {
+    background: transparent; 
+    border: none;
+}
+
+QLabel#userslabel, QLabel#bookslabel, QLabel#issueandreturnlabel {
+    font: bold 16pt &quot;Segoe UI&quot;;
+    color: #007bff; 
+    border-bottom: 2px solid #007bff;  
+}
+
+
+QLabel#issueandreturnlabel {
+    margin-bottom: 10px;
+}
+
+QLineEdit {
+    background-color: #ffffff; 
+    border: 1px solid #ced4da; 
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12pt;
+    color: #212529;
+}
+
+QLineEdit:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    background: #e9ecef;
+    border: 1px solid #ced4da;
+}
+
+QScrollBar::handle {
+    background: #6c757d;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:hover {
+    background: #495057;
+}
+</string>
   </property>
   <widget class="QLabel" name="mainmenulabel">
    <property name="geometry">
@@ -32,7 +128,7 @@
    <property name="font">
     <font>
      <family>Segoe UI</family>
-     <pointsize>28</pointsize>
+     <pointsize>12</pointsize>
      <bold>true</bold>
     </font>
    </property>
@@ -54,7 +150,9 @@
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI</family>
      <pointsize>16</pointsize>
+     <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
@@ -76,7 +174,9 @@
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI</family>
      <pointsize>16</pointsize>
+     <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>
@@ -90,9 +190,9 @@
   <widget class="QPushButton" name="adduserbutton">
    <property name="geometry">
     <rect>
-     <x>99</x>
+     <x>79</x>
      <y>140</y>
-     <width>101</width>
+     <width>121</width>
      <height>36</height>
     </rect>
    </property>
@@ -103,9 +203,9 @@
   <widget class="QPushButton" name="deleteuserbutton">
    <property name="geometry">
     <rect>
-     <x>99</x>
+     <x>79</x>
      <y>200</y>
-     <width>101</width>
+     <width>121</width>
      <height>36</height>
     </rect>
    </property>
@@ -116,9 +216,9 @@
   <widget class="QPushButton" name="edituserbutton">
    <property name="geometry">
     <rect>
-     <x>99</x>
+     <x>79</x>
      <y>270</y>
-     <width>101</width>
+     <width>121</width>
      <height>36</height>
     </rect>
    </property>
@@ -129,9 +229,9 @@
   <widget class="QPushButton" name="viewusersbutton">
    <property name="geometry">
     <rect>
-     <x>99</x>
+     <x>79</x>
      <y>330</y>
-     <width>101</width>
+     <width>121</width>
      <height>36</height>
     </rect>
    </property>
@@ -142,9 +242,9 @@
   <widget class="QPushButton" name="issuebookbutton">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>340</x>
      <y>390</y>
-     <width>111</width>
+     <width>121</width>
      <height>36</height>
     </rect>
    </property>
@@ -155,9 +255,9 @@
   <widget class="QPushButton" name="returnbookbutton">
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>340</x>
      <y>440</y>
-     <width>111</width>
+     <width>121</width>
      <height>36</height>
     </rect>
    </property>
@@ -168,9 +268,9 @@
   <widget class="QPushButton" name="editbookbutton">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>570</x>
      <y>270</y>
-     <width>101</width>
+     <width>141</width>
      <height>36</height>
     </rect>
    </property>
@@ -181,9 +281,9 @@
   <widget class="QPushButton" name="searchbooksbutton">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>570</x>
      <y>330</y>
-     <width>101</width>
+     <width>141</width>
      <height>36</height>
     </rect>
    </property>
@@ -194,9 +294,9 @@
   <widget class="QPushButton" name="deletebookbutton">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>570</x>
      <y>200</y>
-     <width>101</width>
+     <width>141</width>
      <height>36</height>
     </rect>
    </property>
@@ -207,9 +307,9 @@
   <widget class="QPushButton" name="addbookbutton">
    <property name="geometry">
     <rect>
-     <x>590</x>
+     <x>570</x>
      <y>140</y>
-     <width>101</width>
+     <width>141</width>
      <height>36</height>
     </rect>
    </property>
@@ -220,9 +320,9 @@
   <widget class="QPushButton" name="logoutbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>320</x>
      <y>500</y>
-     <width>151</width>
+     <width>161</width>
      <height>51</height>
     </rect>
    </property>
@@ -263,7 +363,9 @@ QPushButton#logoutbutton:pressed {
    </property>
    <property name="font">
     <font>
+     <family>Segoe UI</family>
      <pointsize>16</pointsize>
+     <italic>false</italic>
      <bold>true</bold>
     </font>
    </property>

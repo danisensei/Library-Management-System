@@ -1,2 +1,12 @@
-123|123|123|Fiction
-11|11|11|2
+
+1987431203|Wings of Freedom|Emily Carter|Fiction
+9874893092|Animals|John Smith|History
+4783294012|Echoes of the Heart|Anna Gray|Poetry
+8765432190|The Chronicles of Time|Michael Brown|Literature
+7654321987|Beasts of the Wild|Laura Adams|History
+6543219876|Whispers of the Soul|898
+5432109876|Tales of the Forgotten|James Turner|Fiction
+4321098765|The Pages of Eternity|Sarah Williams|Literature
+3210987654|Legends of the Past|David Johnson|History
+2109876543|Dreams of Tomorrow|Emma Roberts|Fiction
+

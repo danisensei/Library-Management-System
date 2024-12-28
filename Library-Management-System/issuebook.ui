@@ -11,19 +11,136 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Issue Book</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #2d2d30;
+    color: #ffffff;
+}
+
+QPushButton {
+    background-color: #444444;
+    border: 1px solid #555555;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+QPushButton:hover {
+    background-color: #555555;
+}
+
+QTableView {
+    background-color: #333333;
+    color: white;
+    border: 1px solid #555555;
+    gridline-color: #555555;
+    selection-background-color: #555555;
+}
+
+QLineEdit {
+    background-color: #444444;
+    color: white;
+    border: 1px solid #555555;
+    border-radius: 5px;
+}
+
+QLabel {
+    color: white;
+}
+</string>
   </property>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>500</y>
-     <width>80</width>
-     <height>24</height>
+     <x>230</x>
+     <y>490</y>
+     <width>91</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="bookTable">
+   <property name="geometry">
+    <rect>
+     <x>35</x>
+     <y>21</y>
+     <width>361</width>
+     <height>271</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableView" name="UserTable">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>20</y>
+     <width>361</width>
+     <height>271</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ISBNfield">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>340</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="UserIDfield">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>400</y>
+     <width>311</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ISBN">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>350</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ISBN</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="UserID">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>410</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>User ID</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="issueButton">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>490</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Issue Book</string>
    </property>
   </widget>
  </widget>
