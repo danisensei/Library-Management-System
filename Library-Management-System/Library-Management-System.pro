@@ -21,6 +21,7 @@ SOURCES += \
     mainmenu.cpp \
     mainwindow.cpp \
     registerform.cpp \
+    returnbook.cpp \
     searchbooks.cpp \
     viewusers.cpp
 
@@ -36,6 +37,7 @@ HEADERS += \
     mainmenu.h \
     mainwindow.h \
     registerform.h \
+    returnbook.h \
     searchbooks.h \
     viewusers.h
 
@@ -50,6 +52,7 @@ FORMS += \
     mainmenu.ui \
     mainwindow.ui \
     registerform.ui \
+    returnbook.ui \
     searchbooks.ui \
     viewusers.ui
 

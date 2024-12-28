@@ -19,6 +19,10 @@
 #include "ui_searchbooks.h"
 #include "issuebook.h"
 #include "ui_issuebook.h"
+#include "returnbook.h".h"
+#include "ui_returnbook.h"
+
+
 
 mainmenu::mainmenu(QWidget *parent)
     : QWidget(parent)
@@ -126,6 +130,10 @@ void mainmenu :: on_issuebookbutton_clicked()
 void mainmenu :: on_returnbookbutton_clicked()
 {
     qDebug() << "returnbook!";
+    returnbook *Return = new returnbook();
+    Return->setAttribute(Qt::WA_DeleteOnClose);
+    Return->show();
+    this->hide();
 }
 void mainmenu :: on_logoutbutton_clicked()
 {
