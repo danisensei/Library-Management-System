@@ -47,17 +47,30 @@ void issuebook::loadBooks()
         while (!in.atEnd()) {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() >= 2) {
-                QList<QStandardItem*> row;
+
+            QList<QStandardItem*> row;
+
+            if (parts.size() == 4) {
+                // Format: ISBN|Book Name|Author|Genre
                 row.append(new QStandardItem(parts[0])); // ISBN
                 row.append(new QStandardItem(parts[1])); // Book Name
-                row.append(new QStandardItem("Available")); // Default Availability
-                bookModel->appendRow(row);
+                row.append(new QStandardItem("Available")); // Default availability
+            } else if (parts.size() == 3) {
+
+                // Format: ISBN|Book Name|User ID
+                row.append(new QStandardItem(parts[0])); // ISBN
+                row.append(new QStandardItem(parts[1])); // Book Name
+                row.append(new QStandardItem(parts[2])); // Availability/User ID
             }
+
+            if (!row.isEmpty())
+                bookModel->appendRow(row);
         }
         file.close();
     }
 }
+
+
 
 void issuebook::loadUsers()
 {
@@ -156,9 +169,8 @@ void issuebook::updateBookAvailability(const QString &isbn, const QString &userI
         QString line = in.readLine();
         QStringList parts = line.split("|");
 
-        if (parts.size() >= 2 && parts[0] == isbn)
-        {
-            content += parts[0] + "|" + parts[1] + "|" + userId + "\n"; // Set availability as User ID
+        if (parts.size() >= 2 && parts[0] == isbn) {
+            content += parts[0] + "|" + parts[1] + "|" + userId + "\n";
             updated = true;
         } else {
             content += line + "\n";
@@ -173,3 +185,4 @@ void issuebook::updateBookAvailability(const QString &isbn, const QString &userI
 
     file.close();
 }
+

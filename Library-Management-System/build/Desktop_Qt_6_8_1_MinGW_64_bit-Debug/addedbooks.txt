@@ -1,12 +1,12 @@
 
-1987431203|Wings of Freedom|Emily Carter|Fiction
+1987431203|Wings of Freedom|1002
 9874893092|Animals|John Smith|History
 4783294012|Echoes of the Heart|Anna Gray|Poetry
 8765432190|The Chronicles of Time|Michael Brown|Literature
 7654321987|Beasts of the Wild|Laura Adams|History
-6543219876|Whispers of the Soul|898
-5432109876|Tales of the Forgotten|James Turner|Fiction
+6543219876|Whispers of the Soul|1005
+5432109876|Tales of the Forgotten|1008
 4321098765|The Pages of Eternity|Sarah Williams|Literature
-3210987654|Legends of the Past|David Johnson|History
+3210987654|Legends of the Past|1001
 2109876543|Dreams of Tomorrow|Emma Roberts|Fiction
 
