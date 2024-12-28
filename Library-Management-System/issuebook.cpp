@@ -113,33 +113,57 @@ void issuebook::processIssueRequest()
         return;
     }
 
-
     QPair<QString, QString> issueRequest = issueQueue.front();
     QString isbn = issueRequest.first;
     QString userId = issueRequest.second;
     QString bookName;
+    QString userName;
 
-    bool found = false;
+    bool bookFound = false;
+    bool userFound = false;
+
+    // Find the book in the model
     for (int row = 0; row < bookModel->rowCount(); ++row) {
         if (bookModel->item(row, 0)->text() == isbn) {
             bookName = bookModel->item(row, 1)->text();
             bookModel->item(row, 2)->setText(userId); // Update availability to User ID
-            found = true;
+            bookFound = true;
             break;
         }
     }
 
+    // Find the user in the model
+    for (int row = 0; row < userModel->rowCount(); ++row) {
+        if (userModel->item(row, 1)->text() == userId) {
+            userName = userModel->item(row, 0)->text();
+            userFound = true;
+            break;
+        }
+    }
 
-    if (!found) {
+    if (!bookFound) {
         QMessageBox::warning(this, "Book Not Found", "No book found with the given ISBN.");
+    } else if (!userFound) {
+        QMessageBox::warning(this, "User Not Found", "No user found with the given User ID.");
     } else {
         issueQueue.pop();
 
         storeIssuedBookDetails(isbn, userId, bookName);
-
         updateBookAvailability(isbn, userId);
+
+        // Display success message
+        QMessageBox::information(
+            this,
+            "Success",
+            QString("'%1' with ISBN '%2' issued to %3 (User ID: %4).")
+                .arg(bookName)
+                .arg(isbn)
+                .arg(userName)
+                .arg(userId)
+            );
     }
 }
+
 
 void issuebook::storeIssuedBookDetails(const QString &isbn, const QString &userId, const QString &bookName)
 {

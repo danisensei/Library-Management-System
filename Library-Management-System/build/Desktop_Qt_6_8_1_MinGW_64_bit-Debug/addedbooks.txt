@@ -3,10 +3,10 @@
 9874893092|Animals|John Smith|History
 4783294012|Echoes of the Heart|Anna Gray|Poetry
 8765432190|The Chronicles of Time|Michael Brown|Literature
-7654321987|Beasts of the Wild|Laura Adams|History
+7654321987|Beasts of the Wild|1009
 6543219876|Whispers of the Soul|1005
 5432109876|Tales of the Forgotten|1008
-4321098765|The Pages of Eternity|Sarah Williams|Literature
+4321098765|The Pages of Eternity|1002
 3210987654|Legends of the Past|1001
 2109876543|Dreams of Tomorrow|Emma Roberts|Fiction
 
