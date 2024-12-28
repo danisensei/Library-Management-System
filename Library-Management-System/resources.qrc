@@ -4,6 +4,10 @@
     </qresource>
     <qresource prefix="/images">
         <file>images/library.png</file>
+        <file>images/reading-book.png</file>
+        <file>images/archive.png</file>
+        <file>images/book.png</file>
+        <file>images/library2.png</file>
+        <file>images/member.png</file>
     </qresource>
 </RCC>
-

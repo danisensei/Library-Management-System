@@ -11,12 +11,19 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>HDM Library Management System</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+    QWidget {
+        background-color: #f0f4f7;
+    }
+   </string>
   </property>
   <widget class="QLabel" name="mainmenulabel">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>70</x>
      <y>10</y>
      <width>681</width>
      <height>51</height>
@@ -29,59 +36,64 @@
      <bold>true</bold>
     </font>
    </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
    <property name="text">
-    <string>HDM's Library Management System</string>
+    <string>HDM Library Management System</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="userslabel">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>110</y>
-     <width>41</width>
-     <height>16</height>
+     <x>120</x>
+     <y>90</y>
+     <width>61</width>
+     <height>30</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="text">
-    <string>USERS</string>
+    <string>Users</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="bookslabel">
    <property name="geometry">
     <rect>
-     <x>630</x>
-     <y>100</y>
-     <width>71</width>
-     <height>16</height>
+     <x>600</x>
+     <y>90</y>
+     <width>81</width>
+     <height>30</height>
     </rect>
    </property>
-   <property name="text">
-    <string>BOOKS</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="iandrlabel">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>330</y>
-     <width>51</width>
-     <height>16</height>
-    </rect>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
-    <string>I&amp;R</string>
+    <string>Books</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="adduserbutton">
    <property name="geometry">
     <rect>
      <x>99</x>
-     <y>160</y>
+     <y>140</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -92,9 +104,9 @@
    <property name="geometry">
     <rect>
      <x>99</x>
-     <y>190</y>
+     <y>200</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -105,9 +117,9 @@
    <property name="geometry">
     <rect>
      <x>99</x>
-     <y>220</y>
+     <y>270</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -118,9 +130,9 @@
    <property name="geometry">
     <rect>
      <x>99</x>
-     <y>250</y>
+     <y>330</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -130,23 +142,23 @@
   <widget class="QPushButton" name="issuebookbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>350</x>
      <y>390</y>
      <width>111</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
-    <string>Issue Book </string>
+    <string>Issue Book</string>
    </property>
   </widget>
   <widget class="QPushButton" name="returnbookbutton">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>420</y>
+     <x>350</x>
+     <y>440</y>
      <width>111</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -156,10 +168,10 @@
   <widget class="QPushButton" name="editbookbutton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>220</y>
+     <x>590</x>
+     <y>270</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -169,10 +181,10 @@
   <widget class="QPushButton" name="searchbooksbutton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>250</y>
+     <x>590</x>
+     <y>330</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -182,10 +194,10 @@
   <widget class="QPushButton" name="deletebookbutton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>190</y>
+     <x>590</x>
+     <y>140</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -195,10 +207,10 @@
   <widget class="QPushButton" name="addbookbutton">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>160</y>
+     <x>590</x>
+     <y>200</y>
      <width>101</width>
-     <height>24</height>
+     <height>36</height>
     </rect>
    </property>
    <property name="text">
@@ -209,16 +221,138 @@
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>493</y>
-     <width>111</width>
+     <y>500</y>
+     <width>151</width>
      <height>51</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#logoutbutton {
+    background-color: #FF5733; 
+    color: white; 
+    border: 2px solid #FF5733; 
+    border-radius: 10px; 
+    padding: 10px 20px;
+    font: bold 14px &quot;Segoe UI&quot;; 
+}
+
+QPushButton#logoutbutton:hover {
+    background-color: #E74C3C; 
+    border-color: #E74C3C; 
+}
+
+QPushButton#logoutbutton:pressed {
+    background-color: #C0392B; 
+    border-color: #C0392B; 
+    color: #FDEDEC; /
+}
+</string>
    </property>
    <property name="text">
     <string>Logout</string>
    </property>
   </widget>
+  <widget class="QLabel" name="issueandreturnlabel">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>350</y>
+     <width>191</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Issue and Return</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignmentFlag::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="image_center">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>120</y>
+     <width>201</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/images/images/reading-book.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="userimg">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>61</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/images/images/member.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bookimg">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>80</y>
+     <width>61</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/images/images/book.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="issuereturnimg">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>400</y>
+     <width>61</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="resources.qrc">:/images/images/archive.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
