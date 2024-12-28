@@ -21,7 +21,7 @@ adduser::~adduser() {
 
 void adduser::on_backbutton_clicked()
 {
-    qDebug() <<"back button clicked";
+
     mainmenu *backwidget= new mainmenu();
     backwidget->setAttribute(Qt::WA_DeleteOnClose);
     backwidget->show();
