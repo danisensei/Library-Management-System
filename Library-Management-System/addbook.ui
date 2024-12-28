@@ -129,14 +129,39 @@
    </property>
   </widget>
   <widget class="QComboBox" name="genrecombobox">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>330</y>
-     <width>300</width>
-     <height>30</height>
-    </rect>
-   </property>
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>330</y>
+       <width>300</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Fiction</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Fantasy</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>History</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Literature</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Poetry</string>
+      </property>
+     </item>
   </widget>
   <widget class="QPushButton" name="addbutton">
    <property name="geometry">

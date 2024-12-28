@@ -112,7 +112,7 @@
     </font>
    </property>
    <property name="text">
-    <string>ADD USERS</string>
+    <string>Add Users</string>
    </property>
   </widget>
   <widget class="QPushButton" name="addubutton">

@@ -13,11 +13,18 @@ addbook::addbook(QMap<QString, QVariantMap>* books, QWidget *parent)
 {
     ui->setupUi(this);
 
+    ui->genrecombobox->addItem("Fiction");
+    ui->genrecombobox->addItem("Fantasy");
+    ui->genrecombobox->addItem("History");
+    ui->genrecombobox->addItem("Literature");
+    ui->genrecombobox->addItem("Poetry");
+
     loadBooksFromFile();
 
     connect(ui->addbutton, &QPushButton::clicked, this, &addbook::onAddBook);
     connect(ui->backbutton, &QPushButton::clicked, this, &addbook::onBack);
 }
+
 
 addbook::~addbook()
 {
