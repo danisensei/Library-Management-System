@@ -17,6 +17,8 @@
 #include "ui_editbook.h"
 #include "searchbooks.h"
 #include "ui_searchbooks.h"
+#include "issuebook.h"
+#include "ui_issuebook.h"
 
 mainmenu::mainmenu(QWidget *parent)
     : QWidget(parent)
@@ -115,6 +117,10 @@ void mainmenu :: on_searchbooksbutton_clicked()
 void mainmenu :: on_issuebookbutton_clicked()
 {
     qDebug() << "issuebook!";
+    issuebook *issue = new issuebook();
+    issue->setAttribute(Qt::WA_DeleteOnClose);
+    issue->show();
+    this->hide();
 }
 
 void mainmenu :: on_returnbookbutton_clicked()

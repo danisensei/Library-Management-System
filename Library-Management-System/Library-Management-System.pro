@@ -15,6 +15,7 @@ SOURCES += \
     deleteuser.cpp \
     editbook.cpp \
     editusers.cpp \
+    issuebook.cpp \
     linkedlist.cpp \
     main.cpp \
     mainmenu.cpp \
@@ -30,6 +31,7 @@ HEADERS += \
     deleteuser.h \
     editbook.h \
     editusers.h \
+    issuebook.h \
     linkedlist.h \
     mainmenu.h \
     mainwindow.h \
@@ -44,6 +46,7 @@ FORMS += \
     deleteuser.ui \
     editbook.ui \
     editusers.ui \
+    issuebook.ui \
     mainmenu.ui \
     mainwindow.ui \
     registerform.ui \
