@@ -13,13 +13,125 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+ QWidget {
+         background-color: #f5f5f5;
+      }
+
+      QLabel {
+         color: #2e3b4e;
+         font-weight: 600;
+      }
+
+      QLineEdit {
+         background-color: #fff;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         padding: 10px;
+         color: #333;
+         font-size: 12px;
+      }
+
+      QLineEdit:focus {
+         border-color: #4CAF50;
+         box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+      }
+
+      QPushButton {
+         background-color: #4CAF50;
+         color: white;
+         border-radius: 5px;
+         padding: 8px 16px;
+         font-size: 14px;
+         font-weight: 600;
+         border: none;
+      }
+
+      QPushButton:hover {
+         background-color: #45a049;
+      }
+
+      QPushButton:pressed {
+         background-color: #3e8e41;
+      }
+
+      QPushButton#backbutton {
+         background-color: #ff5722;
+      }
+
+      QPushButton#backbutton:hover {
+         background-color: #e64a19;
+      }
+
+      QPushButton#savebutton {
+         background-color: #2196F3;
+      }
+
+      QPushButton#savebutton:hover {
+         background-color: #1976D2;
+      }
+
+      QTableView {
+         background-color: #ffffff;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         font-size: 14px;
+         color: #333333;
+         gridline-color: #e0e0e0;
+      }
+
+      QTableView QHeaderView {
+         background-color: #4CAF50;
+         color: white;
+         font-weight: 600;
+      }
+
+      QTableView QHeaderView::section {
+         padding: 5px;
+         background-color: #4CAF50;
+         color: white;
+         font-weight: 600;
+      }
+
+      QTableView::item {
+         padding: 8px;
+         background-color: #ffffff;
+         color: #333333;
+         border-bottom: 1px solid #f0f0f0;
+      }
+
+      QTableView::item:selected {
+         background-color: #e1f5e1;
+      }
+
+      QTableView QAbstractItemView {
+         background-color: #ffffff;
+         color: #333333;
+         selection-background-color: #e1f5e1;
+         font-size: 14px;
+      }
+
+      QTableView::item:pressed {
+         background-color: #f1f1f1;
+      }
+
+      QWidget#editbook {
+         padding: 30px;
+      }
+
+      QPushButton#savebutton {
+         margin-top: 15px;
+      }
+</string>
+  </property>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>540</y>
+     <y>533</y>
      <width>80</width>
-     <height>24</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -35,14 +147,20 @@
      <height>311</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
   </widget>
   <widget class="QPushButton" name="savebutton">
    <property name="geometry">
     <rect>
      <x>680</x>
-     <y>540</y>
+     <y>513</y>
      <width>80</width>
-     <height>24</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">

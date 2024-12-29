@@ -4,9 +4,7 @@
 4455667788|Into the Abyss|David Black|Drama
 5566778899|The Forbidden Path|Emma Blue|Horror
 6677889900|Echoes of Silence|Oliver Gray|Poetry
-7788990011|The Mystery of the Isles|James Collins|Adventure
-8899001122|The Lost City|Olivia Turner|Fiction
 9900112233|Whispers in the Dark|William Green|Drama
 1011122334|Beyond the Stars|Mia Johnson|Horror
-1000000001|How to Read A|Test|Literature
+1000000001|How to Read A|Tes3|Literature
 193847595403|Dinosaurs|Dr DD|History

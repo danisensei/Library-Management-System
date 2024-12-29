@@ -143,12 +143,30 @@ QWidget#deletebook {
   <widget class="QTableView" name="Booktable">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>80</x>
      <y>90</y>
-     <width>721</width>
-     <height>311</height>
+     <width>631</width>
+     <height>301</height>
     </rect>
    </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+   </property>
+   <property name="dragDropMode">
+    <enum>QAbstractItemView::DragDropMode::NoDragDrop</enum>
+   </property>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
   </widget>
   <widget class="QLineEdit" name="isbnbox">
    <property name="geometry">
