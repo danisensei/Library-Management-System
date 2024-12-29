@@ -10,14 +10,116 @@
     <height>516</height>
    </rect>
   </property>
-  <property name="font">
-   <font>
-    <family>Segoe UI Black</family>
-    <bold>true</bold>
-   </font>
-  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #2e3b4e;
+    color: #ffffff;
+    border: none;
+}
+
+QLabel {
+    color: #ffffff;
+}
+
+QGroupBox {
+    background-color: #394a62;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    margin: 20px;
+}
+
+QLineEdit {
+    background-color: #3d4b63;
+    color: #ffffff;
+    border: 2px solid #5a6b7b;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    background-color: #2e3b4e;
+}
+
+QPushButton {
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #388e3c;
+    border-color: #388e3c;
+}
+
+QPushButton#RegisterButton {
+    background-color: #ff9800;
+    border-color: #ff9800;
+}
+
+QPushButton#RegisterButton:hover {
+    background-color: #fb8c00;
+    border-color: #fb8c00;
+}
+
+QPushButton#RegisterButton:pressed {
+    background-color: #f57c00;
+    border-color: #f57c00;
+}
+
+QLabel#usernamelabel, QLabel#passswordlabel {
+    color: #e0e0e0;
+    font-weight: normal;
+}
+
+QWidget#centralwidget {
+    background-color: #2e3b4e;
+    padding: 20px;
+}
+
+QGroupBox#RegLoginGroup {
+    border-radius: 10px;
+    border: 1px solid #5a6b7b;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+QStatusBar {
+    background-color: #2e3b4e;
+    color: #ffffff;
+}
+
+QPushButton#LoginButton {
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+QPushButton#LoginButton:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+QPushButton#LoginButton:pressed {
+    background-color: #388e3c;
+    border-color: #388e3c;
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -31,25 +133,30 @@
     </property>
     <property name="font">
      <font>
-      <family>Segoe UI</family>
-      <pointsize>28</pointsize>
+      <family>VT323</family>
+      <pointsize>36</pointsize>
       <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">QLabel {
+font-family:VT323
+}</string>
     </property>
     <property name="text">
-     <string>HDM's Library Management System</string>
+     <string>HDM Library Management System</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::TextFormat::PlainText</enum>
     </property>
    </widget>
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>190</x>
       <y>60</y>
-      <width>251</width>
-      <height>211</height>
+      <width>331</width>
+      <height>241</height>
      </rect>
     </property>
     <property name="text">
@@ -66,9 +173,9 @@
     <property name="geometry">
      <rect>
       <x>90</x>
-      <y>300</y>
+      <y>290</y>
       <width>521</width>
-      <height>191</height>
+      <height>211</height>
      </rect>
     </property>
     <property name="font">
@@ -93,7 +200,7 @@
        <x>170</x>
        <y>30</y>
        <width>301</width>
-       <height>31</height>
+       <height>47</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="UsernameGrid">
@@ -113,9 +220,9 @@
      <property name="geometry">
       <rect>
        <x>170</x>
-       <y>90</y>
+       <y>80</y>
        <width>301</width>
-       <height>31</height>
+       <height>51</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="PasswordGrid">
@@ -147,7 +254,7 @@
       <font>
        <family>VT323</family>
        <pointsize>24</pointsize>
-       <bold>true</bold>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -172,7 +279,7 @@ font-family:VT323
       <font>
        <family>VT323</family>
        <pointsize>24</pointsize>
-       <bold>true</bold>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -188,7 +295,7 @@ font-family:VT323
      <property name="geometry">
       <rect>
        <x>180</x>
-       <y>140</y>
+       <y>150</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -197,7 +304,7 @@ font-family:VT323
       <font>
        <family>Arial</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
@@ -226,7 +333,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>330</x>
-       <y>140</y>
+       <y>150</y>
        <width>121</width>
        <height>31</height>
       </rect>
@@ -235,7 +342,7 @@ QPushButton:pressed {
       <font>
        <family>Arial</family>
        <pointsize>12</pointsize>
-       <bold>false</bold>
+       <bold>true</bold>
       </font>
      </property>
      <property name="styleSheet">
