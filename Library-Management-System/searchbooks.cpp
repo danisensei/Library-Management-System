@@ -42,7 +42,8 @@ void searchbooks::on_searchButton_clicked()
 {
     QString searchTerm = ui->searchLineEdit->text().trimmed();
 
-    if (searchTerm.isEmpty()) {
+    if (searchTerm.isEmpty())
+    {
         QMessageBox::warning(this, "Search Error", "Please enter a search term.");
         return;
     }
@@ -51,8 +52,10 @@ void searchbooks::on_searchButton_clicked()
     QString lowerSearchTerm = searchTerm.toLower();
 
     bool found = false;
-    for (auto it = booksMap.constBegin(); it != booksMap.constEnd(); ++it) {
-        if (it.key().toLower().contains(lowerSearchTerm) || it.value().at(0).toLower().contains(lowerSearchTerm)) {
+    for (auto it = booksMap.constBegin(); it != booksMap.constEnd(); ++it)
+    {
+        if (it.key().toLower().contains(lowerSearchTerm) || it.value().at(0).toLower().contains(lowerSearchTerm))
+        {
             QList<QStandardItem *> row;
             row.append(new QStandardItem(it.key()));   // ISBN
             row.append(new QStandardItem(it.value().at(0))); // Name
@@ -63,7 +66,8 @@ void searchbooks::on_searchButton_clicked()
         }
     }
 
-    if (!found) {
+    if (!found)
+    {
         QMessageBox::information(this, "No Results", "No books found matching the search term.");
     }
 }
@@ -71,17 +75,20 @@ void searchbooks::on_searchButton_clicked()
 void searchbooks::loadBooksFromFile(const QString &fileName)
 {
     QFile file(fileName);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QMessageBox::critical(this, "Error", "Unable to open books file.");
         return;
     }
 
     QTextStream in(&file);
-    while (!in.atEnd()) {
+    while (!in.atEnd())
+    {
         QString line = in.readLine();
         QStringList fields = line.split("|");
 
-        if (fields.size() == 4) {
+        if (fields.size() == 4)
+        {
             QString isbn = fields.at(0).trimmed();
             QString name = fields.at(1).trimmed();
             QString author = fields.at(2).trimmed();
@@ -95,7 +102,8 @@ void searchbooks::loadBooksFromFile(const QString &fileName)
 
 void searchbooks::populateTable()
 {
-    for (auto it = booksMap.constBegin(); it != booksMap.constEnd(); ++it) {
+    for (auto it = booksMap.constBegin(); it != booksMap.constEnd(); ++it)
+    {
         QList<QStandardItem *> row;
         row.append(new QStandardItem(it.key()));   // ISBN
         row.append(new QStandardItem(it.value().at(0))); // Name

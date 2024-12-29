@@ -50,13 +50,15 @@ void deletebook::on_deletebutton_clicked()
 {
     QString isbnToDelete = ui->isbnbox->text().trimmed();
 
-    if (isbnToDelete.isEmpty()) {
+    if (isbnToDelete.isEmpty())
+    {
         QMessageBox::warning(this, "Error", "Please enter an ISBN to delete.");
         return;
     }
 
     QFile file("addedbooks.txt");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QMessageBox::critical(this, "Error", "Failed to open the file for reading.");
         return;
     }
@@ -65,30 +67,36 @@ void deletebook::on_deletebutton_clicked()
     QTextStream in(&file);
     QStringList allLines;
     bool found = false;
-    while (!in.atEnd()) {
+    while (!in.atEnd())
+    {
         QString line = in.readLine();
         QStringList parts = line.split("|");
-        if (parts.size() == 4 && parts[0] == isbnToDelete) {
+        if (parts.size() == 4 && parts[0] == isbnToDelete)
+        {
             found = true;
-        } else {
+        } else
+        {
             allLines.append(line);
         }
     }
     file.close();
 
-    if (!found) {
+    if (!found)
+    {
         QMessageBox::information(this, "Not Found", "No book found with the given ISBN.");
         return;
     }
 
 
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate)) {
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
+    {
         QMessageBox::critical(this, "Error", "Failed to open the file for writing.");
         return;
     }
 
     QTextStream out(&file);
-    for (const QString &line : allLines) {
+    for (const QString &line : allLines)
+    {
         out << line << "\n";
     }
     file.close();
@@ -112,14 +120,18 @@ void deletebook::loadBooksFromFile()
     model->setHorizontalHeaderLabels({"ISBN", "Name", "Author", "Genre"});
 
     QFile file("addedbooks.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4) {
+            if (parts.size() == 4)
+            {
                 QList<QStandardItem *> items;
-                for (const QString &part : parts) {
+                for (const QString &part : parts)
+                {
                     items.append(new QStandardItem(part));
                 }
                 model->appendRow(items);

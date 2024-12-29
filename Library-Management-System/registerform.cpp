@@ -23,7 +23,8 @@ void RegisterForm::on_RegisterButton_clicked()
     QString email = ui->EmailTextField->text();
     QString password = ui->PasswordField->text();
 
-    if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+    if (username.isEmpty() || email.isEmpty() || password.isEmpty())
+    {
         qDebug() << "Please fill all fields!";
         return;
     }
@@ -31,8 +32,10 @@ void RegisterForm::on_RegisterButton_clicked()
 
     QFile file("users.txt");
 
-    if (!file.exists()) {
-        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+    if (!file.exists())
+    {
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        {
             qDebug() << "Failed to create file!";
             return;
         }
@@ -41,7 +44,8 @@ void RegisterForm::on_RegisterButton_clicked()
     }
 
 
-    if (!file.open(QIODevice::Append | QIODevice::Text)) {
+    if (!file.open(QIODevice::Append | QIODevice::Text))
+    {
         qDebug() << "Failed to open file for writing.";
         return;
     }

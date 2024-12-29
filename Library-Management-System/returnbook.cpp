@@ -15,10 +15,8 @@ returnbook::returnbook(QWidget *parent)
     availabilityModel = new QStandardItemModel(this);
     availabilityModel->setHorizontalHeaderLabels({"ISBN", "Availability", "Book Name", "Author"});
     ui->availabilityTable->setModel(availabilityModel);
-
     loadAvailability();
-
-    connect(ui->returnButton, &QPushButton::clicked, this, &returnbook::on_returnButton_clicked);
+    connect(ui->returnButton, &QPushButton::clicked, this, &returnbook::on_returnButton_clicked);    
 }
 
 returnbook::~returnbook()
@@ -29,12 +27,15 @@ returnbook::~returnbook()
 void returnbook::loadAvailability()
 {
     QFile file("availability.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4) {
+            if (parts.size() == 4)
+            {
                 QList<QStandardItem*> row;
                 row.append(new QStandardItem(parts[0]));  // ISBN
                 row.append(new QStandardItem(parts[1]));  // Availability (User ID)
@@ -47,12 +48,16 @@ void returnbook::loadAvailability()
     }
 }
 
+
+
+
 void returnbook::on_returnButton_clicked()
 {
     QString isbn = ui->ISBNfield->text();
     QString userId = ui->UserIDfield->text();
 
-    if (isbn.isEmpty() || userId.isEmpty()) {
+    if (isbn.isEmpty() || userId.isEmpty())
+    {
         QMessageBox::warning(this, "Input Error", "Please provide both ISBN and User ID.");
         return;
     }
@@ -60,18 +65,21 @@ void returnbook::on_returnButton_clicked()
     markAsReturned(isbn, userId);
 }
 
+
 void returnbook::markAsReturned(const QString &isbn, const QString &userId)
 {
     bool found = false;
     QFile file("availability.txt");
     QStringList lines;
 
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
         while (!in.atEnd()) {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4 && parts[0] == isbn && parts[1] == userId) {
+            if (parts.size() == 4 && parts[0] == isbn && parts[1] == userId)
+            {
                 found = true;
                 continue;
             }
@@ -80,11 +88,14 @@ void returnbook::markAsReturned(const QString &isbn, const QString &userId)
         file.close();
     }
 
-    if (found) {
+    if (found)
+    {
         saveUpdatedAvailability(lines);
         QMessageBox::information(this, "Return Success", "The book has been returned successfully.");
         updateAvailabilityTable();
-    } else {
+    }
+    else
+    {
         QMessageBox::warning(this, "Return Error", "No matching book found for return.");
     }
 }
@@ -92,9 +103,11 @@ void returnbook::markAsReturned(const QString &isbn, const QString &userId)
 void returnbook::saveUpdatedAvailability(const QStringList &lines)
 {
     QFile file("availability.txt");
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
         QTextStream out(&file);
-        for (const QString &line : lines) {
+        for (const QString &line : lines)
+        {
             out << line << "\n";
         }
         file.close();

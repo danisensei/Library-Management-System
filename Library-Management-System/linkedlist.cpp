@@ -5,30 +5,39 @@
 
 LinkedList::LinkedList() : head(nullptr) {}
 
-User* LinkedList::getHead() const {
+User* LinkedList::getHead() const
+{
     return head;
 }
 
-LinkedList::~LinkedList() {
+LinkedList::~LinkedList()
+{
     clearList();
 }
 
-void LinkedList::addUser(const QString& name, const QString& email, const QString& id) {
+void LinkedList::addUser(const QString& name, const QString& email, const QString& id)
+{
     User* newUser = new User(name, email, id);
     newUser->next = head;
     head = newUser;
     qDebug() << "User added:" << name << email << id;
 }
 
-bool LinkedList::removeUser(const QString& id) {
+bool LinkedList::removeUser(const QString& id)
+{
     User* current = head;
     User* previous = nullptr;
 
-    while (current) {
-        if (current->id == id) {
-            if (previous) {
+    while (current)
+    {
+        if (current->id == id)
+        {
+            if (previous)
+            {
                 previous->next = current->next;
-            } else {
+            }
+            else
+            {
                 head = current->next;
             }
             delete current;
@@ -41,16 +50,19 @@ bool LinkedList::removeUser(const QString& id) {
 }
 
 
-void LinkedList::saveToFile(const QString& filename) const {
+void LinkedList::saveToFile(const QString& filename) const
+{
     QFile file(filename);
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
         qDebug() << "Failed to open file for saving.";
         return;
     }
 
     QTextStream out(&file);
     User* current = head;
-    while (current) {
+    while (current)
+    {
         out << current->name << "," << current->email << "," << current->id << "\n";
         current = current->next;
     }
@@ -59,19 +71,23 @@ void LinkedList::saveToFile(const QString& filename) const {
     qDebug() << "Linked list saved to file:" << filename;
 }
 
-void LinkedList::loadFromFile(const QString& filename) {
+void LinkedList::loadFromFile(const QString& filename)
+{
     QFile file(filename);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         qDebug() << "Failed to open file for loading.";
         return;
     }
 
     QTextStream in(&file);
     QString line;
-    while (!in.atEnd()) {
+    while (!in.atEnd())
+    {
         line = in.readLine();
         QStringList parts = line.split(",");
-        if (parts.size() == 3) {
+        if (parts.size() == 3)
+        {
             addUser(parts[0], parts[1], parts[2]);
         }
     }
@@ -80,9 +96,11 @@ void LinkedList::loadFromFile(const QString& filename) {
     qDebug() << "Linked list loaded from file:" << filename;
 }
 
-void LinkedList::clearList() {
+void LinkedList::clearList()
+{
     User* temp;
-    while (head) {
+    while (head)
+    {
         temp = head;
         head = head->next;
         delete temp;

@@ -48,7 +48,8 @@ void editusers::saveToFile()
 
     QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->usertable->model());
 
-    if (!model) {
+    if (!model)
+    {
         return;
     }
 

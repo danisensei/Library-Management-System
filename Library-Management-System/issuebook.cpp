@@ -47,15 +47,18 @@ void issuebook::on_backbutton_clicked()
 void issuebook::loadBooks()
 {
     QFile file("addedbooks.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split("|");
 
             QList<QStandardItem*> row;
 
-            if (parts.size() >= 4) {
+            if (parts.size() >= 4)
+            {
                 // Format: ISBN|Book Name|Author|Genre
                 row.append(new QStandardItem(parts[0])); // ISBN
                 row.append(new QStandardItem(parts[1])); // Book Name
@@ -72,12 +75,15 @@ void issuebook::loadBooks()
 void issuebook::loadUsers()
 {
     QFile file("addedusers.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split(",");
-            if (parts.size() >= 3) {
+            if (parts.size() >= 3)
+            {
                 QList<QStandardItem*> row;
                 row.append(new QStandardItem(parts[0]));
                 row.append(new QStandardItem(parts[2].trimmed()));
@@ -91,12 +97,15 @@ void issuebook::loadUsers()
 void issuebook::loadAvailability()
 {
     QFile file("availability.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4) { // expect ISBN, Availability, Book Name, Author
+            if (parts.size() == 4)
+            { // expect ISBN, Availability, Book Name, Author
                 QList<QStandardItem*> row;
                 row.append(new QStandardItem(parts[0])); // ISBN
                 row.append(new QStandardItem(parts[1])); // Availability (User ID)
@@ -114,7 +123,8 @@ void issuebook::on_issueButton_clicked()
     QString isbn = ui->ISBNfield->text();
     QString userId = ui->UserIDfield->text();
 
-    if (isbn.isEmpty() || userId.isEmpty()) {
+    if (isbn.isEmpty() || userId.isEmpty())
+    {
         QMessageBox::warning(this, "Input Error", "Please provide both ISBN and User ID.");
         return;
     }
@@ -125,7 +135,8 @@ void issuebook::on_issueButton_clicked()
 
 void issuebook::processIssueRequest()
 {
-    if (issueQueue.empty()) {
+    if (issueQueue.empty())
+    {
         QMessageBox::information(this, "Queue Empty", "No book issue requests in the queue.");
         return;
     }
@@ -140,8 +151,10 @@ void issuebook::processIssueRequest()
     bool userFound = false;
 
     // Find the book in the model
-    for (int row = 0; row < bookModel->rowCount(); ++row) {
-        if (bookModel->item(row, 0)->text() == isbn) {
+    for (int row = 0; row < bookModel->rowCount(); ++row)
+    {
+        if (bookModel->item(row, 0)->text() == isbn)
+        {
             bookName = bookModel->item(row, 1)->text();
             bookFound = true;
             break;
@@ -149,8 +162,10 @@ void issuebook::processIssueRequest()
     }
 
     // Find the user in the model
-    for (int row = 0; row < userModel->rowCount(); ++row) {
-        if (userModel->item(row, 1)->text() == userId) {
+    for (int row = 0; row < userModel->rowCount(); ++row)
+    {
+        if (userModel->item(row, 1)->text() == userId)
+        {
             userName = userModel->item(row, 0)->text();
             userFound = true;
             break;
@@ -159,9 +174,13 @@ void issuebook::processIssueRequest()
 
     if (!bookFound) {
         QMessageBox::warning(this, "Book Not Found", "No book found with the given ISBN.");
-    } else if (!userFound) {
+    }
+    else if (!userFound)
+    {
         QMessageBox::warning(this, "User Not Found", "No user found with the given User ID.");
-    } else {
+    }
+    else
+    {
         issueQueue.pop();
 
         storeIssuedBookDetails(isbn, userId, bookName);
@@ -184,7 +203,8 @@ void issuebook::storeIssuedBookDetails(const QString &isbn, const QString &userI
     QString currentDateTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
 
     QFile file("issuedbooks.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text)) {
+    if (file.open(QIODevice::Append | QIODevice::Text))
+    {
         QTextStream out(&file);
         out << userId << "," << isbn << "," << bookName << "," << currentDateTime << "," << "Issued" << "\n";
         file.close();
@@ -200,8 +220,10 @@ void issuebook::updateBookAvailability(const QString &isbn, const QString &userI
 void issuebook::updateAvailabilityTable(const QString &isbn, const QString &userId)
 {
     // Check if the ISBN already exists in the availability table and update it
-    for (int row = 0; row < availabilityModel->rowCount(); ++row) {
-        if (availabilityModel->item(row, 0)->text() == isbn) {
+    for (int row = 0; row < availabilityModel->rowCount(); ++row)
+    {
+        if (availabilityModel->item(row, 0)->text() == isbn)
+        {
             availabilityModel->item(row, 1)->setText(userId);
             return;
         }
@@ -219,8 +241,10 @@ void issuebook::storeAvailability(const QString &isbn, const QString &userId)
     QString author;
 
     // Find the book details using the ISBN
-    for (int row = 0; row < bookModel->rowCount(); ++row) {
-        if (bookModel->item(row, 0)->text() == isbn) {
+    for (int row = 0; row < bookModel->rowCount(); ++row)
+    {
+        if (bookModel->item(row, 0)->text() == isbn)
+        {
             bookName = bookModel->item(row, 1)->text();  // Book Name
             author = bookModel->item(row, 2)->text();    // Author
             break;
@@ -228,11 +252,14 @@ void issuebook::storeAvailability(const QString &isbn, const QString &userId)
     }
 
     QFile file("availability.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text)) {
+    if (file.open(QIODevice::Append | QIODevice::Text))
+    {
         QTextStream out(&file);
         out << isbn << "|" << userId << "|" << bookName << "|" << author << "\n";
         file.close();
-    } else {
+    }
+    else
+    {
         QMessageBox::warning(this, "File Error", "Failed to open availability.txt.");
     }
 }

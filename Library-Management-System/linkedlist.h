@@ -2,7 +2,8 @@
 #define LINKEDLIST_H
 
 #include <QString>
-struct User {
+struct User
+{
     QString name;
     QString email;
     QString id;
@@ -13,7 +14,8 @@ struct User {
 };
 
 
-class LinkedList {
+class LinkedList
+{
 private:
     User* head;
 

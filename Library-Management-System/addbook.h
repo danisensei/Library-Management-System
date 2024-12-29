@@ -7,7 +7,8 @@
 #include <QVariantMap>
 
 
-namespace Ui {
+namespace Ui
+{
 class addbook;
 }
 

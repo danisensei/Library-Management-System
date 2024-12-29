@@ -6,7 +6,8 @@
 #include <QString>
 #include <QVariantMap>
 
-namespace Ui {
+namespace Ui
+{
 class mainmenu;
 }
 

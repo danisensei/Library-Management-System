@@ -34,7 +34,8 @@ void viewusers :: on_backbutton_clicked()
     this->hide();
 }
 
-void viewusers::loadUserTable() {
+void viewusers::loadUserTable()
+{
     QStandardItemModel *model = new QStandardItemModel(this);
 
 
@@ -42,7 +43,8 @@ void viewusers::loadUserTable() {
 
 
     User *current = userList.getHead();
-    while (current) {
+    while (current)
+    {
         QList<QStandardItem*> row;
         row << new QStandardItem(current->name)
             << new QStandardItem(current->email)

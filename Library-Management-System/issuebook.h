@@ -10,7 +10,8 @@
 #include <QPair>
 #include <QDateTime>
 
-namespace Ui {
+namespace Ui
+{
 class issuebook;
 }
 

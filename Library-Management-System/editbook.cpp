@@ -18,11 +18,13 @@ editbook::editbook(QWidget *parent)
 
 editbook::~editbook()
 {
-    if (model) {
+    if (model)
+    {
         delete model;
         model = nullptr;
     }
-    delete ui;}
+    delete ui;
+}
 
 void editbook:: on_backbutton_clicked()
 {
@@ -30,13 +32,12 @@ void editbook:: on_backbutton_clicked()
     backbutton->setAttribute(Qt::WA_DeleteOnClose);
     backbutton->show();
     this->hide();
-
-
 }
 
 void editbook::loadBooksFromFile()
 {
-    if (model) {
+    if (model)
+    {
         delete model;
         model = nullptr;
     }
@@ -45,14 +46,18 @@ void editbook::loadBooksFromFile()
     model->setHorizontalHeaderLabels({"ISBN", "Name", "Author", "Genre"});
 
     QFile file("addedbooks.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4) {
+            if (parts.size() == 4)
+            {
                 QList<QStandardItem *> items;
-                for (const QString &part : parts) {
+                for (const QString &part : parts)
+                {
                     items.append(new QStandardItem(part));
                 }
                 model->appendRow(items);
@@ -71,11 +76,14 @@ void editbook::savetofile()
     if (!model) return;
 
     QFile file("addedbooks.txt");
-    if (file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
         QTextStream out(&file);
-        for (int row = 0; row < model->rowCount(); ++row) {
+        for (int row = 0; row < model->rowCount(); ++row)
+        {
             QStringList rowData;
-            for (int col = 0; col < model->columnCount(); ++col) {
+            for (int col = 0; col < model->columnCount(); ++col)
+            {
                 rowData.append(model->item(row, col)->text());
             }
             out << rowData.join("|") << "\n";

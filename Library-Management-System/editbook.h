@@ -4,7 +4,8 @@
 #include <QWidget>
 #include <QStandardItemModel>
 
-namespace Ui {
+namespace Ui
+{
 class editbook;
 }
 

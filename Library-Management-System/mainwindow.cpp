@@ -25,9 +25,12 @@ MainWindow::~MainWindow()
 void MainWindow::loadCustomFont()
 {
     int fontId = QFontDatabase::addApplicationFont(":/fonts/fonts/VT323-Regular.ttf");
-    if (fontId == -1) {
+    if (fontId == -1)
+    {
         qDebug() << "Failed to load font!";
-    } else {
+    }
+    else
+    {
         QStringList fontFamilies = QFontDatabase::applicationFontFamilies(fontId);
         qDebug() << "Loaded font families:" << fontFamilies;
 
@@ -53,19 +56,22 @@ void MainWindow::on_LoginButton_clicked()
     QString enteredPassword = ui->Password->text();
 
     QFile file("users.txt");
-    if (!file.exists()) {
+    if (!file.exists())
+    {
         qDebug() << "Users file not found!";
         return;
     }
 
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         qDebug() << "Failed to open users file!";
         return;
     }
 
     QList<QPair<QString, QString>> users;
     QTextStream in(&file);
-    while (!in.atEnd()) {
+    while (!in.atEnd())
+    {
         QString line = in.readLine();
         QStringList parts = line.split(",");
         if (parts.size() == 3)
@@ -92,8 +98,8 @@ void MainWindow::on_LoginButton_clicked()
     {
         qDebug() << "Login successful!";
         on_Login_Success();
-    } else
-
+    }
+    else
     {
         qDebug() << "Invalid credentials!";
     }

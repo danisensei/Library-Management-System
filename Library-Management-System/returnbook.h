@@ -7,7 +7,8 @@
 #include <QMessageBox>
 #include <QStandardItemModel>
 
-namespace Ui {
+namespace Ui
+{
 class returnbook;
 }
 

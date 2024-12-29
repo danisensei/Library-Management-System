@@ -6,7 +6,8 @@
 #include <QStandardItemModel>
 #include <QStringList>
 
-namespace Ui {
+namespace Ui
+{
 class searchbooks;
 }
 

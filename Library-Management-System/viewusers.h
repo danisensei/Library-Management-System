@@ -4,7 +4,8 @@
 #include <QWidget>
 #include "LinkedList.h"
 
-namespace Ui {
+namespace Ui
+{
 class viewusers;
 }
 

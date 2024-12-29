@@ -34,12 +34,15 @@ addbook::~addbook()
 void addbook::loadBooksFromFile()
 {
     QFile file("addedbooks.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
         QTextStream in(&file);
-        while (!in.atEnd()) {
+        while (!in.atEnd())
+        {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4) {
+            if (parts.size() == 4)
+            {
                 QString isbn = parts[0];
                 QVariantMap bookDetails;
                 bookDetails["name"] = parts[1];
@@ -55,7 +58,8 @@ void addbook::loadBooksFromFile()
 void addbook::saveBookToFile(const QString& isbn, const QVariantMap& bookDetails)
 {
     QFile file("addedbooks.txt");
-    if (file.open(QIODevice::Append | QIODevice::Text)) {
+    if (file.open(QIODevice::Append | QIODevice::Text))
+    {
         QTextStream out(&file);
         out << isbn << "|" << bookDetails["name"].toString() << "|"
             << bookDetails["author"].toString() << "|"
@@ -72,12 +76,14 @@ void addbook::onAddBook()
     QString genre = ui->genrecombobox->currentText();
 
 
-    if (name.isEmpty() || author.isEmpty() || isbn.isEmpty()) {
+    if (name.isEmpty() || author.isEmpty() || isbn.isEmpty())
+    {
         QMessageBox::warning(this, "Input Error", "All fields except genre must be filled!");
         return;
     }
 
-    if (books->contains(isbn)) {
+    if (books->contains(isbn))
+    {
         QMessageBox::warning(this, "Duplicate Entry", "A book with this ISBN already exists!");
         return;
     }

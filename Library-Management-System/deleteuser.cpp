@@ -26,7 +26,8 @@ deleteuser::~deleteuser()
     delete ui;
 }
 
-void deleteuser::loadUserTable() {
+void deleteuser::loadUserTable()
+{
     QStandardItemModel *model = new QStandardItemModel(this);
 
 
@@ -34,7 +35,8 @@ void deleteuser::loadUserTable() {
 
 
     User *current = userList.getHead();
-    while (current) {
+    while (current)
+    {
         QList<QStandardItem*> row;
         row << new QStandardItem(current->name)
             << new QStandardItem(current->email)
@@ -46,20 +48,24 @@ void deleteuser::loadUserTable() {
     ui->usertable->setModel(model);
 }
 
-void deleteuser::onDeleteButtonClicked() {
+void deleteuser::onDeleteButtonClicked()
+{
     QString idToDelete = ui->deleteidtextbox->text().trimmed();
 
-    if (idToDelete.isEmpty()) {
+    if (idToDelete.isEmpty())
+    {
         qDebug() << "ID field is empty.";
         return;
     }
 
 
-    if (userList.removeUser(idToDelete)) {
+    if (userList.removeUser(idToDelete))
+    {
         qDebug() << "User with ID" << idToDelete << "deleted.";
         saveUserData();
         loadUserTable();
-    } else {
+    } else
+    {
         qDebug() << "User with ID" << idToDelete << "not found.";
     }
 }
