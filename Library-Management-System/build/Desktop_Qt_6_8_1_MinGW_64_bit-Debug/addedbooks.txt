@@ -1,12 +1,9 @@
-
-1987431203|Wings of Freedom|1002
-9874893092|Animals|John Smith|History
 4783294012|Echoes of the Heart|Anna Gray|Poetry
-8765432190|The Chronicles of Time|Michael Brown|Literature
-7654321987|Beasts of the Wild|1009
-6543219876|Whispers of the Soul|1005
-5432109876|Tales of the Forgotten|1008
-4321098765|The Pages of Eternity|1002
-3210987654|Legends of the Past|1001
-2109876543|Dreams of Tomorrow|Emma Roberts|Fiction
-
+1234567890|Winds of Change|John Smith|Fiction
+9823746501|The Silent Ocean|Mary Jane|Adventure
+5647382910|Moonlit Skies|1008
+9273846510|Deep Waters|Mark Twain|Drama
+3748291057|The Final Hour|George Orwell|Thriller
+2039485762|A Journey Beyond|1004
+1029384756|The Forgotten Realm|Stephen King|Horror
+5647382950|Voices in the Dark|J.R.R. Tolkien|Fantasy

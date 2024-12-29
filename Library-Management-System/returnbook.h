@@ -2,6 +2,9 @@
 #define RETURNBOOK_H
 
 #include <QWidget>
+#include <QFile>
+#include <QTextStream>
+#include <QMessageBox>
 
 namespace Ui {
 class returnbook;
@@ -16,10 +19,11 @@ public:
     ~returnbook();
 
 private slots:
-    void on_backbutton_clicked();
+    //void on_returnButton_clicked();
 
 private:
     Ui::returnbook *ui;
+
 };
 
 #endif // RETURNBOOK_H

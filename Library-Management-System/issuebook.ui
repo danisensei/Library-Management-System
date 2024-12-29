@@ -67,9 +67,9 @@ QLabel {
   <widget class="QTableView" name="bookTable">
    <property name="geometry">
     <rect>
-     <x>35</x>
+     <x>15</x>
      <y>21</y>
-     <width>361</width>
+     <width>321</width>
      <height>271</height>
     </rect>
    </property>
@@ -77,9 +77,9 @@ QLabel {
   <widget class="QTableView" name="UserTable">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>350</x>
      <y>20</y>
-     <width>361</width>
+     <width>271</width>
      <height>271</height>
     </rect>
    </property>
@@ -141,6 +141,16 @@ QLabel {
    </property>
    <property name="text">
     <string>Issue Book</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="AvailabilityTable">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>20</y>
+     <width>161</width>
+     <height>271</height>
+    </rect>
    </property>
   </widget>
  </widget>

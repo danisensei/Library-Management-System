@@ -30,14 +30,18 @@ private:
     Ui::issuebook *ui;
     QStandardItemModel *bookModel;
     QStandardItemModel *userModel;
+    QStandardItemModel *availabilityModel;
     std::queue<QPair<QString, QString>> issueQueue;
 
     void loadBooks();
     void loadUsers();
+    void loadAvailability();
 
     void processIssueRequest();
     void storeIssuedBookDetails(const QString &isbn, const QString &userId, const QString &bookName);
     void updateBookAvailability(const QString &isbn, const QString &userId);
+    void updateAvailabilityTable(const QString &isbn, const QString &availability);
+    void storeAvailability(const QString &isbn, const QString &availability);
 };
 
 #endif // ISSUEBOOK_H

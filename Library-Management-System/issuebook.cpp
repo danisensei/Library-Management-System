@@ -14,15 +14,20 @@ issuebook::issuebook(QWidget *parent)
     ui->setupUi(this);
 
     bookModel = new QStandardItemModel(this);
-    bookModel->setHorizontalHeaderLabels({"ISBN", "Book Name", "Availability"});
+    bookModel->setHorizontalHeaderLabels({"ISBN", "Book Name", "Author"});
     ui->bookTable->setModel(bookModel);
 
     userModel = new QStandardItemModel(this);
     userModel->setHorizontalHeaderLabels({"Name", "User ID"});
     ui->UserTable->setModel(userModel);
 
+    availabilityModel = new QStandardItemModel(this);
+    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Availability"});
+    ui->AvailabilityTable->setModel(availabilityModel);
+
     loadBooks();
     loadUsers();
+    loadAvailability();
 
     connect(ui->issueButton, &QPushButton::clicked, this, &issuebook::on_issueButton_clicked);
 }
@@ -50,17 +55,11 @@ void issuebook::loadBooks()
 
             QList<QStandardItem*> row;
 
-            if (parts.size() == 4) {
+            if (parts.size() >= 4) {
                 // Format: ISBN|Book Name|Author|Genre
                 row.append(new QStandardItem(parts[0])); // ISBN
                 row.append(new QStandardItem(parts[1])); // Book Name
-                row.append(new QStandardItem("Available")); // Default availability
-            } else if (parts.size() == 3) {
-
-                // Format: ISBN|Book Name|User ID
-                row.append(new QStandardItem(parts[0])); // ISBN
-                row.append(new QStandardItem(parts[1])); // Book Name
-                row.append(new QStandardItem(parts[2])); // Availability/User ID
+                row.append(new QStandardItem(parts[2])); // Author
             }
 
             if (!row.isEmpty())
@@ -69,7 +68,6 @@ void issuebook::loadBooks()
         file.close();
     }
 }
-
 
 
 void issuebook::loadUsers()
@@ -91,6 +89,25 @@ void issuebook::loadUsers()
     }
 }
 
+void issuebook::loadAvailability()
+{
+    QFile file("availability.txt");
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&file);
+        while (!in.atEnd()) {
+            QString line = in.readLine();
+            QStringList parts = line.split("|");
+            if (parts.size() == 2) {
+                QList<QStandardItem*> row;
+                row.append(new QStandardItem(parts[0])); // ISBN
+                row.append(new QStandardItem(parts[1])); // Availability
+                availabilityModel->appendRow(row);
+            }
+        }
+        file.close();
+    }
+}
+
 void issuebook::on_issueButton_clicked()
 {
     QString isbn = ui->ISBNfield->text();
@@ -100,7 +117,6 @@ void issuebook::on_issueButton_clicked()
         QMessageBox::warning(this, "Input Error", "Please provide both ISBN and User ID.");
         return;
     }
-
 
     issueQueue.push(qMakePair(isbn, userId));
     processIssueRequest();
@@ -126,7 +142,6 @@ void issuebook::processIssueRequest()
     for (int row = 0; row < bookModel->rowCount(); ++row) {
         if (bookModel->item(row, 0)->text() == isbn) {
             bookName = bookModel->item(row, 1)->text();
-            bookModel->item(row, 2)->setText(userId); // Update availability to User ID
             bookFound = true;
             break;
         }
@@ -164,7 +179,6 @@ void issuebook::processIssueRequest()
     }
 }
 
-
 void issuebook::storeIssuedBookDetails(const QString &isbn, const QString &userId, const QString &bookName)
 {
     QString currentDateTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");
@@ -179,6 +193,7 @@ void issuebook::storeIssuedBookDetails(const QString &isbn, const QString &userI
 
 void issuebook::updateBookAvailability(const QString &isbn, const QString &userId)
 {
+    // Update availability in addedbooks.txt
     QFile file("addedbooks.txt");
     if (!file.open(QIODevice::ReadWrite | QIODevice::Text)) {
         QMessageBox::warning(this, "File Error", "Failed to open addedbooks.txt.");
@@ -208,5 +223,32 @@ void issuebook::updateBookAvailability(const QString &isbn, const QString &userI
     }
 
     file.close();
+
+    // Update the availability in the availability table
+    updateAvailabilityTable(isbn, userId);
 }
 
+void issuebook::updateAvailabilityTable(const QString &isbn, const QString &availability)
+{
+    for (int row = 0; row < availabilityModel->rowCount(); ++row) {
+        if (availabilityModel->item(row, 0)->text() == isbn) {
+            availabilityModel->item(row, 1)->setText(availability);
+            return;
+        }
+    }
+
+    QList<QStandardItem*> row;
+    row.append(new QStandardItem(isbn));
+    row.append(new QStandardItem(availability));
+    availabilityModel->appendRow(row);
+}
+
+void issuebook::storeAvailability(const QString &isbn, const QString &availability)
+{
+    QFile file("availability.txt");
+    if (file.open(QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << isbn << "|" << availability << "\n";
+        file.close();
+    }
+}

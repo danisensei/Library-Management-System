@@ -1,24 +1,6 @@
-898,6543219876,Whispers of the Soul,2024-12-28 21:36:54,Issued
-898,6543219876,Whispers of the Soul,2024-12-28 21:36:54,Issued
-1006,6543219876,Whispers of the Soul,2024-12-28 21:45:04,Issued
-1006,6543219876,Whispers of the Soul,2024-12-28 21:45:04,Issued
-1005,6543219876,Whispers of the Soul,2024-12-28 21:45:34,Issued
-1005,6543219876,Whispers of the Soul,2024-12-28 21:45:34,Issued
-1008,5432109876,Tales of the Forgotten,2024-12-28 21:52:17,Issued
-1008,5432109876,Tales of the Forgotten,2024-12-28 21:52:17,Issued
-1001,3210987654,Legends of the Past,2024-12-28 21:54:43,Issued
-1001,3210987654,Legends of the Past,2024-12-28 21:54:43,Issued
-1002,1987431203,Wings of Freedom,2024-12-28 21:55:04,Issued
-1002,1987431203,Wings of Freedom,2024-12-28 21:55:04,Issued
-1008,4321098765,The Pages of Eternity,2024-12-28 21:59:37,Issued
-1008,4321098765,The Pages of Eternity,2024-12-28 21:59:37,Issued
-1008=9,4321098765,The Pages of Eternity,2024-12-28 21:59:51,Issued
-1008=9,4321098765,The Pages of Eternity,2024-12-28 21:59:51,Issued
-1008=9,4321098765,The Pages of Eternity,2024-12-28 21:59:53,Issued
-1008=9,4321098765,The Pages of Eternity,2024-12-28 21:59:53,Issued
-1007,4321098765,The Pages of Eternity,2024-12-28 22:00:00,Issued
-1007,4321098765,The Pages of Eternity,2024-12-28 22:00:00,Issued
-1002,4321098765,The Pages of Eternity,2024-12-28 22:00:09,Issued
-1002,4321098765,The Pages of Eternity,2024-12-28 22:00:09,Issued
-1009,7654321987,Beasts of the Wild,2024-12-28 22:02:26,Issued
-1009,7654321987,Beasts of the Wild,2024-12-28 22:02:31,Issued
+1008,5647382910,Moonlit Skies,2024-12-29 10:54:27,Issued
+1008,5647382910,Moonlit Skies,2024-12-29 10:54:30,Issued
+1006,2039485762,A Journey Beyond,2024-12-29 10:57:54,Issued
+1006,2039485762,A Journey Beyond,2024-12-29 10:57:55,Issued
+1004,2039485762,A Journey Beyond,2024-12-29 10:58:42,Issued
+1004,2039485762,A Journey Beyond,2024-12-29 10:58:44,Issued
