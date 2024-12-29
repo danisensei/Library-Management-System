@@ -22,6 +22,8 @@ public:
 private slots:
     void on_returnButton_clicked();
 
+    void on_backbutton_clicked();
+
 private:
     Ui::returnbook *ui;
     QStandardItemModel *availabilityModel;

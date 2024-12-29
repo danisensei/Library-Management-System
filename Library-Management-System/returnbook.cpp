@@ -4,6 +4,8 @@
 #include <QTextStream>
 #include <QMessageBox>
 #include <QStandardItem>
+#include <mainmenu.h>
+#include<ui_mainmenu.h>
 
 returnbook::returnbook(QWidget *parent)
     : QWidget(parent)
@@ -105,3 +107,11 @@ void returnbook::updateAvailabilityTable()
     availabilityModel->setHorizontalHeaderLabels({"ISBN", "Availability", "Book Name", "Author"});
     loadAvailability();
 }
+
+void returnbook::on_backbutton_clicked()
+{
+    mainmenu *back = new mainmenu();
+    back->show();
+    this->hide();
+}
+
