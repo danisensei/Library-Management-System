@@ -1,9 +1,6 @@
 4783294012|Echoes of the Heart|Anna Gray|Poetry
 1234567890|Winds of Change|John Smith|Fiction
 9823746501|The Silent Ocean|Mary Jane|Adventure
-5647382910|Moonlit Skies|1008
-9273846510|Deep Waters|Mark Twain|Drama
-3748291057|The Final Hour|George Orwell|Thriller
-2039485762|A Journey Beyond|1004
+9273846510|Deep Waters|Mark Twain Drama
 1029384756|The Forgotten Realm|Stephen King|Horror
-5647382950|Voices in the Dark|J.R.R. Tolkien|Fantasy
+
