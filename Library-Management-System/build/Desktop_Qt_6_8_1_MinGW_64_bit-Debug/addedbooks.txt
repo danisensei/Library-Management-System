@@ -3,7 +3,7 @@
 3344556677|A Journey Through Time|Sarah White|Adventure
 4455667788|Into the Abyss|David Black|Drama
 5566778899|The Forbidden Path|Emma Blue|Horror
-6677889900|Echoes of Silence|Oliver Gray|Poetry
+6677889900|Echoes of Silencez|Oliver Gray|Poetry
 9900112233|Whispers in the Dark|William Green|Drama
 1011122334|Beyond the Stars|Mia Johnson|Horror
 1000000001|How to Read A|Tes3|Literature

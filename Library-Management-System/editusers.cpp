@@ -22,34 +22,41 @@ editusers::~editusers()
 
 void editusers::loadUserTable()
 {
-    ui->usertable->setRowCount(0);
-    ui->usertable->setColumnCount(3);
-    ui->usertable->setHorizontalHeaderLabels({"Name", "Email", "ID"});
+    QStandardItemModel *model = new QStandardItemModel();
+    model->setHorizontalHeaderLabels({"Name", "Email", "ID"});
 
     User *current = userList.getHead();
-    int row = 0;
 
     while (current)
     {
-        ui->usertable->insertRow(row);
-        ui->usertable->setItem(row, 0, new QTableWidgetItem(current->name));
-        ui->usertable->setItem(row, 1, new QTableWidgetItem(current->email));
-        ui->usertable->setItem(row, 2, new QTableWidgetItem(current->id));
+        QList<QStandardItem *> row;
+        row.append(new QStandardItem(current->name));
+        row.append(new QStandardItem(current->email));
+        row.append(new QStandardItem(current->id));
+
+        model->appendRow(row);
 
         current = current->next;
-        row++;
     }
+
+    ui->usertable->setModel(model);
 }
 
 void editusers::saveToFile()
 {
     userList.clearList();
 
-    for (int row = 0; row < ui->usertable->rowCount(); ++row)
+    QStandardItemModel *model = qobject_cast<QStandardItemModel *>(ui->usertable->model());
+
+    if (!model) {
+        return;
+    }
+
+    for (int row = 0; row < model->rowCount(); ++row)
     {
-        QString name = ui->usertable->item(row, 0)->text();
-        QString email = ui->usertable->item(row, 1)->text();
-        QString id = ui->usertable->item(row, 2)->text();
+        QString name = model->item(row, 0)->text();
+        QString email = model->item(row, 1)->text();
+        QString id = model->item(row, 2)->text();
 
         userList.addUser(name, email, id);
     }

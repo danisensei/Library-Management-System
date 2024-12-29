@@ -13,18 +13,114 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+  QWidget {
+     background-color: #f9f9f9;
+  }
+
+  QLabel {
+     color: #2a3b4c;
+     font-size: 28px;
+     font-weight: bold;
+     margin-bottom: 20px;
+     text-align: center;
+  }
+
+  QTableView#usertable {
+     background-color: #ffffff;
+     border: 1px solid #d0d0d0;
+     border-radius: 8px;
+     margin-bottom: 20px;
+     alternate-background-color: #f9f9f9;
+     gridline-color: #ccc;
+  }
+
+  QTableView#usertable QHeaderView::section {
+     background-color: #4CAF50;
+     color: black;
+     font-weight: bold;
+     padding: 8px;
+     border: none;
+  }
+
+  QTableView#usertable::item {
+     color: #333;
+     font-size: 14px;
+     padding: 6px 10px;
+     border: 1px solid #ddd;
+  }
+
+  QTableView#usertable::item:selected {
+     background-color: #d0d0d0;
+  }
+
+  QTableView::horizontalHeader {
+     border: 1px solid #ccc;
+  }
+
+  QTableView::verticalHeader {
+     border: 1px solid #ccc;
+  }
+
+  QPushButton {
+     background-color: #009688;
+     color: white;
+     border-radius: 8px;
+     padding: 8px 16px;
+     font-size: 14px;
+     font-weight: 600;
+     border: none;
+  }
+
+  QPushButton:hover {
+     background-color: #00796b;
+  }
+
+  QPushButton:pressed {
+     background-color: #004d40;
+  }
+
+  QPushButton#backbutton {
+     background-color: #ff5722;
+     width: 80px;
+     height: 30px;
+     font-size: 13px;
+  }
+
+  QPushButton#backbutton:hover {
+     background-color: #e64a19;
+  }
+
+  QWidget#viewusers {
+     padding: 40px;
+  }
+
+  QWidget#viewusers QPushButton {
+     margin-top: 20px;
+     font-weight: bold;
+     border-radius: 5px;
+  }
+
+  QWidget#viewusers QPushButton#backbutton {
+     font-size: 13px;
+  }
+
+</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>350</x>
-     <y>60</y>
+     <y>90</y>
      <width>111</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>28</pointsize>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -34,20 +130,23 @@
   <widget class="QTableView" name="usertable">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>180</x>
      <y>150</y>
-     <width>401</width>
-     <height>261</height>
+     <width>461</width>
+     <height>301</height>
     </rect>
    </property>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
   </widget>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>520</y>
-     <width>80</width>
-     <height>24</height>
+     <y>493</y>
+     <width>101</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">

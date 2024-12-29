@@ -13,6 +13,114 @@
   <property name="windowTitle">
    <string>Edit Users</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">  QWidget {
+     background-color: #f9f9f9;
+  }
+
+  QLabel {
+     color: #2a3b4c;
+     font-size: 28px;
+     font-weight: bold;
+     margin-bottom: 20px;
+  }
+
+  QTableView#usertable {
+     background-color: #ffffff;
+     border: 1px solid #d0d0d0;
+     border-radius: 8px;
+     margin-bottom: 20px;
+     alternate-background-color: #f9f9f9;
+     gridline-color: #ccc;
+  }
+
+  QTableView#usertable QHeaderView::section {
+     background-color: #4CAF50;
+     color: black;
+     font-weight: bold;
+     padding: 8px;
+     border: none;
+  }
+
+  QTableView#usertable::item {
+     color: #333;
+     font-size: 14px;
+     padding: 6px 10px;
+     border: 1px solid #ddd;
+  }
+
+  QTableView#usertable::item:selected {
+     background-color: #d0d0d0;
+  }
+
+  QTableView::horizontalHeader {
+     border: 1px solid #ccc;
+  }
+
+  QTableView::verticalHeader {
+     border: 1px solid #ccc;
+  }
+
+  QPushButton {
+     background-color: #009688;
+     color: white;
+     border-radius: 8px;
+     padding: 10px 20px;
+     font-size: 14px;
+     font-weight: 600;
+     border: none;
+  }
+
+  QPushButton:hover {
+     background-color: #00796b;
+  }
+
+  QPushButton:pressed {
+     background-color: #004d40;
+  }
+
+  QPushButton#backbutton {
+     background-color: #ff5722;
+  }
+
+  QPushButton#backbutton:hover {
+     background-color: #e64a19;
+  }
+
+  QPushButton#savebutton {
+     background-color: #3f51b5;
+  }
+
+  QPushButton#savebutton:hover {
+     background-color: #303f9f;
+  }
+
+  QWidget#editusers {
+     padding: 40px;
+  }
+
+  QWidget#editusers QPushButton {
+     margin-top: 20px;
+     font-weight: bold;
+     border-radius: 5px;
+  }
+
+  QWidget#editusers QPushButton#backbutton {
+     width: 80px;
+     height: 30px;
+     font-size: 13px;
+  }
+
+  QWidget#editusers QPushButton#savebutton {
+     width: 80px;
+     height: 30px;
+     font-size: 13px;
+  }
+
+  QWidget#editusers QLabel {
+     text-align: center;
+  }</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -24,14 +132,15 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>28</pointsize>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
     <string>Edit Users</string>
    </property>
   </widget>
-  <widget class="QTableWidget" name="usertable">
+  <widget class="QTableView" name="usertable">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -40,27 +149,17 @@
      <height>261</height>
     </rect>
    </property>
-   <property name="columnCount">
-    <number>3</number>
-   </property>
-   <property name="horizontalHeaderLabels" stdset="0">
-    <stringlist>
-     <string>Name</string>
-     <string>Email</string>
-     <string>ID</string>
-    </stringlist>
-   </property>
-   <column/>
-   <column/>
-   <column/>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
   </widget>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>520</y>
-     <width>80</width>
-     <height>24</height>
+     <y>493</y>
+     <width>91</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -70,10 +169,10 @@
   <widget class="QPushButton" name="savebutton">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>520</y>
-     <width>80</width>
-     <height>24</height>
+     <x>629</x>
+     <y>493</y>
+     <width>91</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">

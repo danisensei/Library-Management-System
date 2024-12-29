@@ -13,6 +13,117 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">  QWidget {
+         background-color: #f7f7f7;
+      }
+
+      QLabel {
+         color: #2a3b4c;
+         font-size: 14px;
+         font-weight: 600;
+         margin-bottom: 5px;
+      }
+
+      QLineEdit {
+         background-color: #ffffff;
+         border: 1px solid #d0d0d0;
+         border-radius: 8px;
+         padding: 10px;
+         font-size: 13px;
+         color: #333;
+      }
+
+      QLineEdit:focus {
+         border-color: #4CAF50;
+      }
+
+      QPushButton {
+         background-color: #009688;
+         color: white;
+         border-radius: 8px;
+         padding: 10px 20px;
+         font-size: 14px;
+         font-weight: 600;
+         border: none;
+      }
+
+      QPushButton:hover {
+         background-color: #00796b;
+      }
+
+      QPushButton:pressed {
+         background-color: #004d40;
+      }
+
+      QPushButton#backbutton {
+         background-color: #ff5722;
+      }
+
+      QPushButton#backbutton:hover {
+         background-color: #e64a19;
+      }
+
+      QLineEdit#namefield,
+      QLineEdit#mailfield,
+      QLineEdit#idfield {
+         width: 250px;
+         height: 30px;
+      }
+
+      QPushButton#addubutton {
+         background-color: #3f51b5;
+         width: 200px;
+         height: 35px;
+         margin-top: 20px;
+      }
+
+      QPushButton#addubutton:hover {
+         background-color: #303f9f;
+      }
+
+      QLabel#label {
+         color: #333;
+         font-size: 22px;
+         font-weight: bold;
+         text-align: center;
+         margin-bottom: 30px;
+      }
+
+      QWidget#adduser {
+         padding: 40px;
+      }
+
+      QLineEdit#namefield,
+      QLineEdit#mailfield,
+      QLineEdit#idfield {
+         width: 300px;
+      }
+
+      QWidget#adduser QLabel {
+         margin-left: 30px;
+      }
+
+      QWidget#adduser QPushButton {
+         margin-top: 20px;
+         font-weight: bold;
+         border-radius: 5px;
+      }
+
+      QWidget#adduser QPushButton#backbutton {
+         width: 80px;
+         height: 30px;
+         font-size: 13px;
+      }
+
+      QLineEdit#namefield, 
+      QLineEdit#mailfield, 
+      QLineEdit#idfield {
+         font-size: 14px;
+         color: #333;
+         padding: 6px 10px;
+      }</string>
+  </property>
   <widget class="QLineEdit" name="namefield">
    <property name="geometry">
     <rect>
@@ -46,15 +157,16 @@
   <widget class="QLabel" name="idlabel">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>240</x>
      <y>310</y>
-     <width>71</width>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>-1</pointsize>
+     <fontweight>DemiBold</fontweight>
     </font>
    </property>
    <property name="text">
@@ -64,15 +176,16 @@
   <widget class="QLabel" name="namelabel">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>220</x>
      <y>190</y>
-     <width>91</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>-1</pointsize>
+     <fontweight>DemiBold</fontweight>
     </font>
    </property>
    <property name="text">
@@ -82,15 +195,16 @@
   <widget class="QLabel" name="maillabel">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>230</x>
      <y>250</y>
-     <width>81</width>
+     <width>131</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>-1</pointsize>
+     <fontweight>DemiBold</fontweight>
     </font>
    </property>
    <property name="text">
@@ -100,7 +214,7 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>370</x>
      <y>40</y>
      <width>171</width>
      <height>72</height>
@@ -108,7 +222,8 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>21</pointsize>
+     <pointsize>-1</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -121,7 +236,7 @@
      <x>320</x>
      <y>390</y>
      <width>191</width>
-     <height>31</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -133,8 +248,8 @@
     <rect>
      <x>50</x>
      <y>480</y>
-     <width>80</width>
-     <height>24</height>
+     <width>91</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
