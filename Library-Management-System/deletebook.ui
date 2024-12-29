@@ -10,16 +10,130 @@
     <height>589</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f5f5f5;
+}
+
+QLabel {
+    color: #2e3b4e;
+    font-weight: 600;
+}
+
+QLineEdit {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    font-size: 12px;
+}
+
+QLineEdit:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QPushButton:pressed {
+    background-color: #3e8e41;
+}
+
+QPushButton#backbutton {
+    background-color: #ff5722;
+}
+
+QPushButton#backbutton:hover {
+    background-color: #e64a19;
+}
+
+QTableView {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    gridline-color: #e0e0e0;
+}
+
+QTableView QHeaderView {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+QTableView QHeaderView::section {
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+QTableView::item {
+    padding: 8px;
+    background-color: #ffffff;
+    color: #333333;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+QTableView::item:selected {
+    background-color: #e1f5e1;
+}
+
+QTableView QAbstractItemView {
+    background-color: #ffffff;
+    color: #333333;
+    selection-background-color: #e1f5e1;
+    font-size: 14px;
+}
+
+QTableView::item:pressed {
+    background-color: #f1f1f1;
+}
+
+QLabel#label_2 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+QLabel, QLineEdit, QPushButton {
+    margin-bottom: 15px;
+}
+
+QWidget#deletebook {
+    padding: 30px;
+}
+</string>
   </property>
   <widget class="QPushButton" name="backbutton">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>530</y>
-     <width>80</width>
-     <height>24</height>
+     <x>50</x>
+     <y>503</y>
+     <width>101</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -39,10 +153,10 @@
   <widget class="QLineEdit" name="isbnbox">
    <property name="geometry">
     <rect>
-     <x>310</x>
+     <x>280</x>
      <y>410</y>
-     <width>171</width>
-     <height>24</height>
+     <width>261</width>
+     <height>41</height>
     </rect>
    </property>
   </widget>
@@ -52,12 +166,13 @@
      <x>190</x>
      <y>410</y>
      <width>81</width>
-     <height>21</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>11</pointsize>
+     <fontweight>DemiBold</fontweight>
     </font>
    </property>
    <property name="text">
@@ -67,7 +182,7 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
+     <x>300</x>
      <y>30</y>
      <width>231</width>
      <height>71</height>
@@ -75,20 +190,21 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>23</pointsize>
+     <pointsize>-1</pointsize>
+     <fontweight>DemiBold</fontweight>
     </font>
    </property>
    <property name="text">
-    <string>DELETE BOOKS</string>
+    <string>Delete Books</string>
    </property>
   </widget>
   <widget class="QPushButton" name="deletebutton">
    <property name="geometry">
     <rect>
-     <x>350</x>
-     <y>460</y>
-     <width>80</width>
-     <height>24</height>
+     <x>339</x>
+     <y>443</y>
+     <width>131</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
