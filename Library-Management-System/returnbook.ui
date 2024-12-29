@@ -16,8 +16,8 @@
   <widget class="QLineEdit" name="ISBNfield">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>80</y>
+     <x>160</x>
+     <y>240</y>
      <width>300</width>
      <height>30</height>
     </rect>
@@ -26,8 +26,8 @@
   <widget class="QLabel" name="ISBNLabel">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>80</y>
+     <x>100</x>
+     <y>240</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -39,8 +39,8 @@
   <widget class="QLineEdit" name="UserIDfield">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>140</y>
+     <x>160</x>
+     <y>280</y>
      <width>300</width>
      <height>30</height>
     </rect>
@@ -49,8 +49,8 @@
   <widget class="QLabel" name="UserIDLabel">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>140</y>
+     <x>100</x>
+     <y>280</y>
      <width>100</width>
      <height>30</height>
     </rect>
@@ -62,8 +62,8 @@
   <widget class="QPushButton" name="returnButton">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>200</y>
+     <x>260</x>
+     <y>340</y>
      <width>100</width>
      <height>40</height>
     </rect>
@@ -72,5 +72,17 @@
     <string>Mark as Return</string>
    </property>
   </widget>
+  <widget class="QTableView" name="availabilityTable">
+   <property name="geometry">
+    <rect>
+     <x>85</x>
+     <y>30</y>
+     <width>441</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
+ <resources/>
+ <connections/>
 </ui>

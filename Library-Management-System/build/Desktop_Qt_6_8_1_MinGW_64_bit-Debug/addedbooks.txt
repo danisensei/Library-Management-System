@@ -1,6 +1,10 @@
-4783294012|Echoes of the Heart|Anna Gray|Poetry
-1234567890|Winds of Change|John Smith|Fiction
-9823746501|The Silent Ocean|Mary Jane|Adventure
-9273846510|Deep Waters|Mark Twain Drama
-1029384756|The Forgotten Realm|Stephen King|Horror
-
+1122334455|The Last Horizon|Alice Green|Fiction
+2233445566|Shadows of the Past|Michael Brown|Poetry
+3344556677|A Journey Through Time|Sarah White|Adventure
+4455667788|Into the Abyss|David Black|Drama
+5566778899|The Forbidden Path|Emma Blue|Horror
+6677889900|Echoes of Silence|Oliver Gray|Poetry
+7788990011|The Mystery of the Isles|James Collins|Adventure
+8899001122|The Lost City|Olivia Turner|Fiction
+9900112233|Whispers in the Dark|William Green|Drama
+1011122334|Beyond the Stars|Mia Johnson|Horror
