@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QMessageBox>
+#include <QStandardItemModel>
 
 namespace Ui {
 class returnbook;
@@ -19,11 +20,16 @@ public:
     ~returnbook();
 
 private slots:
-    //void on_returnButton_clicked();
+    void on_returnButton_clicked();
 
 private:
     Ui::returnbook *ui;
+    QStandardItemModel *availabilityModel;
 
+    void loadAvailability();
+    void updateAvailabilityTable();
+    void markAsReturned(const QString &isbn, const QString &userId);
+    void saveUpdatedAvailability(const QStringList &lines);
 };
 
 #endif // RETURNBOOK_H

@@ -96,7 +96,7 @@ void issuebook::loadAvailability()
         while (!in.atEnd()) {
             QString line = in.readLine();
             QStringList parts = line.split("|");
-            if (parts.size() == 4) { // We now expect ISBN, Availability, Book Name, Author
+            if (parts.size() == 4) { // expect ISBN, Availability, Book Name, Author
                 QList<QStandardItem*> row;
                 row.append(new QStandardItem(parts[0])); // ISBN
                 row.append(new QStandardItem(parts[1])); // Availability (User ID)
