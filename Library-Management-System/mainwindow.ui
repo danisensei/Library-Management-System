@@ -125,7 +125,7 @@ QPushButton#LoginButton:pressed {
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>90</x>
       <y>0</y>
       <width>681</width>
       <height>51</height>
