@@ -22,7 +22,7 @@ issuebook::issuebook(QWidget *parent)
     ui->UserTable->setModel(userModel);
 
     availabilityModel = new QStandardItemModel(this);
-    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Availability", "Book Name", "Author"});
+    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Issued To", "Book Name", "Author"});
     ui->AvailabilityTable->setModel(availabilityModel);
 
     loadBooks();
@@ -105,10 +105,10 @@ void issuebook::loadAvailability()
             QString line = in.readLine();
             QStringList parts = line.split("|");
             if (parts.size() == 4)
-            { // expect ISBN, Availability, Book Name, Author
+            { // expect ISBN, Availability/ Issued to (User ID) , Book Name, Author
                 QList<QStandardItem*> row;
                 row.append(new QStandardItem(parts[0])); // ISBN
-                row.append(new QStandardItem(parts[1])); // Availability (User ID)
+                row.append(new QStandardItem(parts[1])); // Availability/Issued to (User ID)
                 row.append(new QStandardItem(parts[2])); // Book Name
                 row.append(new QStandardItem(parts[3])); // Author
                 availabilityModel->appendRow(row);

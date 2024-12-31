@@ -8,6 +8,7 @@
 #include <QTextStream>
 #include <QStringList>
 #include <QList>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -97,11 +98,13 @@ void MainWindow::on_LoginButton_clicked()
     if (loginSuccess)
     {
         qDebug() << "Login successful!";
+        QMessageBox::information(this, "Login Success", "Login successful! Click Ok.");
         on_Login_Success();
     }
     else
     {
         qDebug() << "Invalid credentials!";
+        QMessageBox::warning(this, "Error", "Login failed! Invalid credentials.");
     }
 }
 

@@ -13,7 +13,7 @@ returnbook::returnbook(QWidget *parent)
 {
     ui->setupUi(this);
     availabilityModel = new QStandardItemModel(this);
-    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Availability", "Book Name", "Author"});
+    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Issued To", "Book Name", "Author"});
     ui->availabilityTable->setModel(availabilityModel);
     loadAvailability();
     connect(ui->returnButton, &QPushButton::clicked, this, &returnbook::on_returnButton_clicked);    
@@ -117,7 +117,7 @@ void returnbook::saveUpdatedAvailability(const QStringList &lines)
 void returnbook::updateAvailabilityTable()
 {
     availabilityModel->clear();
-    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Availability", "Book Name", "Author"});
+    availabilityModel->setHorizontalHeaderLabels({"ISBN", "Issued To", "Book Name", "Author"});
     loadAvailability();
 }
 

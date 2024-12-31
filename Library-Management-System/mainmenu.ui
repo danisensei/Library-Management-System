@@ -18,7 +18,7 @@
 QWidget {
     background-color: #f8f9fa; 
     font-family: &quot;Segoe UI&quot;;
-    font-size: 12pt;
+    font-size: 18pt;
     color: #212529; 
 }
 
@@ -128,7 +128,7 @@ QScrollBar::handle:hover {
    <property name="font">
     <font>
      <family>Segoe UI</family>
-     <pointsize>12</pointsize>
+     <pointsize>18</pointsize>
      <bold>true</bold>
     </font>
    </property>
